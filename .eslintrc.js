@@ -18,13 +18,15 @@ module.exports = {
       jsx: true
     },
     ecmaVersion: 2018,
-    sourceType: 'module'
+    sourceType: 'module',
+    allowImportExportEverywhere: true
   },
   plugins: ['react'],
   rules: {
     semi: ['error', 'never'],
     quotes: ['error', 'single'],
     'comma-dangle': ['error', 'only-multiline'],
+    'arrow-parens': ['error', 'as-needed'],
     'import/order': [
       'error',
       {
