@@ -6,6 +6,8 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'plugin:import/errors',
+    'plugin:import/warnings',
   ],
   globals: {
     Atomics: 'readonly',
@@ -22,5 +24,16 @@ module.exports = {
     'react',
   ],
   rules: {
+    semi: ['error', 'never'],
+    quotes: ['error', 'single'],
+    'comma-dangle': ['error', 'only-multiline'],
+    'import/order': ['error', {
+      groups: [
+        ['builtin', 'external'],
+        ['sibling', 'parent'],
+        'index',
+      ],
+      'newlines-between': 'always'
+    }]
   },
-};
+}
