@@ -13,10 +13,24 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint -c .eslintrc.js src/**/*",
-    "prettier": "prettier --write src/**/*" 
+    "prettier": "prettier --write src/**/*"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint -c .eslintrc.js --no-ignore --max-warnings 0"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "browserslist": {
     "production": [
@@ -40,6 +54,8 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
     "prettier": "^1.19.1"
   }
 }
