@@ -2,15 +2,16 @@ import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import XHR from 'i18next-xhr-backend'
 import languageDetector from 'i18next-browser-languagedetector'
+import { pathOr } from 'ramda'
 
 import locales from './locales'
 
 const backend = (url, _options, callback) => {
-  const [ns, lng] = url.split('.')
-  try {
-    const locale = locales[ns][lng]
+  const path = url.split('.')
+  const locale = pathOr(null, path, locales)
+  if (locale) {
     callback(locale, { status: '200' })
-  } catch (_err) {
+  } else {
     callback(null, { status: '404' })
   }
 }
