@@ -18,8 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint -c .eslintrc.js src/**/*",
-    "prettier": "prettier --write src/**/*"
+    "lint": "eslint src/*",
+    "prettier": "prettier --write src/*"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,7 +27,7 @@
   "lint-staged": {
     "*.{js,jsx}": [
       "prettier --write",
-      "eslint -c .eslintrc.js --no-ignore --max-warnings 0"
+      "eslint --no-ignore --max-warnings 0"
     ],
     "*.json": [
       "prettier --write"
