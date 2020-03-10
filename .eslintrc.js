@@ -34,6 +34,7 @@ module.exports = {
         groups: [['builtin', 'external'], ['sibling', 'parent'], 'index'],
         'newlines-between': 'always'
       }
-    ]
+    ],
+    'import/prefer-default-export': 0
   }
 }
