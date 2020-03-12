@@ -1,0 +1,19 @@
+{
+  "title": "Looking for a software developer?",
+  "presentation": "I am {{name}}, and I can offer you:",
+  "welcome_items": [
+    {
+      "label": "Experience with both front and backend",
+      "icon": "code"
+    },
+    {
+      "label": "Focus on code quality, efficience and scalability",
+      "icon": "linear_scale"
+    },
+    {
+      "label": "Solve problems with the most recent technologies and paradigms",
+      "icon": "account_tree"
+    }
+  ],
+  "go_to_projects": "Go to projects"
+}

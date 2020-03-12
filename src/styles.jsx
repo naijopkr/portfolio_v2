@@ -7,5 +7,16 @@ export const StyledApp = styled.div`
   background: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.text};
   display: flex;
-  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+
+  .content {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    box-sizing: border-box;
+
+    width: 100%;
+    padding: 32px;
+  }
 `

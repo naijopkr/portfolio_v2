@@ -1,0 +1,19 @@
+{
+  "title": "Procurando um desenvolvedor de software?",
+  "presentation": "Eu sou {{name}}, e posso lhe oferecer:",
+  "welcome_items": [
+    {
+      "label": "Experiência tanto em back como frontend",
+      "icon": "code"
+    },
+    {
+      "label": "Foco em qualidade, eficiência e escalabilidade do código",
+      "icon": "linear_scale"
+    },
+    {
+      "label": "Solucionar problemas com as mais recentes tecnologias e paradimas",
+      "icon": "account_tree"
+    }
+  ],
+  "go_to_projects": "Ir para projetos"
+}

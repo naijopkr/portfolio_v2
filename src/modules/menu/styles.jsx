@@ -6,6 +6,7 @@ export const MenuWrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 64px;
+  box-sizing: border-box;
   background-color: ${({ theme }) => theme.colors.fill};
   box-shadow: 0px 4px 4px ${({ theme }) => theme.colors.shadow};
   padding: 0 32px;

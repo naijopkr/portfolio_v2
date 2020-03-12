@@ -13,7 +13,8 @@ const themes = {
       fill: colors.purple_1,
       title: colors.green_1,
       text: colors.blue_1,
-      shadow: colors.black_2
+      shadow: colors.black_2,
+      border: colors.gray_3
     }
   },
   dark: {
@@ -22,8 +23,9 @@ const themes = {
       background: colors.gray_2,
       fill: colors.purple_1,
       title: colors.green_1,
-      text: colors.blue_1,
-      shadow: colors.black_2
+      text: colors.purple_2,
+      shadow: colors.black_2,
+      border: colors.gray_4
     }
   }
 }
