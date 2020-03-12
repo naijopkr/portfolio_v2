@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 
 import themes from './theme'
-import Menu from './modules/Menu'
+import Menu from './modules/menu'
 import { StyledApp } from './styles'
 
 const App = () => {

@@ -4,6 +4,7 @@ export const LogoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
 
   .logo {
     color: ${({ theme }) => theme.colors.title};

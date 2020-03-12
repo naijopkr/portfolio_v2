@@ -2,7 +2,7 @@ import React from 'react'
 import { Settings } from '@material-ui/icons'
 
 import { MenuWrapper, SettingsIcon } from './styles'
-import Logo from './components/Logo'
+import Logo from './components/logo'
 
 const Menu = () => (
   <MenuWrapper>
