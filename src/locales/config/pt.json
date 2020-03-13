@@ -1,0 +1,17 @@
+{
+  "language": "Idioma",
+  "languages": [
+    {
+      "name": "Inglês",
+      "value": "en"
+    },
+    {
+      "name": "Espanhol",
+      "value": "es"
+    },
+    {
+      "name": "Português",
+      "value": "pt"
+    }
+  ]
+}

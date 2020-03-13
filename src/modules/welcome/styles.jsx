@@ -12,21 +12,21 @@ export const WelcomeWrapper = styled.div`
 
   background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.text};
-  font-family: ${({ theme }) => theme.fontFamily.normal};
+  font-family: ${({ theme }) => theme.fonts.normal};
   box-shadow: 4px 4px 4px ${({ theme }) => theme.colors.shadow};
   border: 1px solid ${({ theme }) => theme.colors.border};
   box-sizing: border-box;
 
   .title {
     max-width: 535px;
-    font-family: ${({ theme }) => theme.fontFamily.normal};
+    font-family: ${({ theme }) => theme.fonts.normal};
     font-size: 56px;
     line-height: 68px;
     margin-bottom: 40px;
   }
 
   .body-list {
-    font-family: ${({ theme }) => theme.fontFamily.normal};
+    font-family: ${({ theme }) => theme.fonts.normal};
     font-size: 24px;
     line-height: 2;
     list-style-type: none;
@@ -58,7 +58,7 @@ export const WelcomeWrapper = styled.div`
 
   .presentation {
     margin: 0 0 16px 0;
-    font-family: ${({ theme }) => theme.fontFamily.normal};
+    font-family: ${({ theme }) => theme.fonts.normal};
     font-size: 24px;
     line-height: 2;
   }
@@ -66,9 +66,10 @@ export const WelcomeWrapper = styled.div`
   .welcome-button {
     background-color: ${({ theme }) => theme.colors.fill};
     color: ${({ theme }) => theme.colors.title};
-    font-family: ${({ theme }) => theme.fontFamily};
+    font-family: ${({ theme }) => theme.fonts.normal};
     padding: 16px;
     text-decoration: none;
     margin-top: 40px;
+    box-shadow: 2px 2px 2px ${({ theme }) => theme.colors.shadow};
   }
 `

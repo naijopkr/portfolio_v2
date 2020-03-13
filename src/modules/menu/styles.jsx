@@ -13,6 +13,8 @@ export const MenuWrapper = styled.div`
 `
 
 export const SettingsIcon = styled.div`
+  position: relative;
+  z-index: 2;
   color: ${({ theme }) => theme.colors.title};
   cursor: pointer;
 `
