@@ -13,6 +13,8 @@ const colors = {
   green_3: 'rgba(125, 158, 28, 0.4)',
   purple_1: '#371f3d',
   purple_2: '#d4d5f1',
+  purple_3: 'rgba(212, 213, 241, 0.8)',
+  purple_4: 'rgba(212, 213, 241, 0.4)',
   white: '#ffffff'
 }
 

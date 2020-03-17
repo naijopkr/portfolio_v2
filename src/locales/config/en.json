@@ -13,5 +13,15 @@
       "name": "Portuguese",
       "value": "pt"
     }
+  ],
+  "themes": [
+    {
+      "name": "Dark",
+      "value": "dark"
+    },
+    {
+      "name": "Light",
+      "value": "light"
+    }
   ]
 }

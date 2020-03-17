@@ -20,6 +20,10 @@ export const ConfigWrapper = styled.div`
 
   cursor: auto;
 
+  .language {
+    margin-bottom: 32px;
+  }
+
   label {
     font-size: 12px;
     text-transform: uppercase;
