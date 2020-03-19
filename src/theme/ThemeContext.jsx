@@ -35,6 +35,19 @@ const THEMES = {
       select_border: colors.purple_3,
       select_border_hover: colors.purple_4
     }
+  },
+  highContrast: {
+    fonts,
+    colors: {
+      background: colors.black_1,
+      fill: colors.purple_1,
+      title: colors.green_4,
+      text: colors.green_4,
+      shadow: colors.gray_1,
+      border: colors.gray_1,
+      select_border: colors.green_4,
+      select_border_hover: colors.green_4
+    }
   }
 }
 

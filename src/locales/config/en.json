@@ -14,6 +14,7 @@
       "value": "pt"
     }
   ],
+  "theme": "Theme",
   "themes": [
     {
       "name": "Dark",
@@ -22,6 +23,10 @@
     {
       "name": "Light",
       "value": "light"
+    },
+    {
+      "name": "High contrast",
+      "value": "highContrast"
     }
   ]
 }
