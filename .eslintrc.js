@@ -8,7 +8,8 @@ module.exports = {
     'airbnb',
     'airbnb/hooks',
     'plugin:import/errors',
-    'plugin:import/warnings'
+    'plugin:import/warnings',
+    'plugin:jsx-a11y/recommended'
   ],
   globals: {
     Atomics: 'readonly',
