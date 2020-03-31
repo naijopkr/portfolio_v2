@@ -1,9 +1,11 @@
-import global from './global'
-import welcome from './welcome'
 import config from './config'
+import global from './global'
+import projects from './projects'
+import welcome from './welcome'
 
 export default {
+  config,
   global,
-  welcome,
-  config
+  projects,
+  welcome
 }

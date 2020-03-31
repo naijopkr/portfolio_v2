@@ -1,7 +1,9 @@
 import React from 'react'
+import { Switch, Route } from 'react-router-dom'
 
 import { ThemeProvider } from './theme'
 import Menu from './modules/menu'
+import Projects from './modules/projects'
 import Welcome from './modules/welcome'
 import { StyledApp } from './styles'
 
@@ -10,7 +12,10 @@ const App = () => (
     <StyledApp>
       <Menu />
       <div className="content">
-        <Welcome />
+        <Switch>
+          <Route path="/projects" component={Projects} />
+          <Route path="/" component={Welcome} />
+        </Switch>
       </div>
     </StyledApp>
   </ThemeProvider>
