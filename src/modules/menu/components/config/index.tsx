@@ -7,7 +7,16 @@ import PropTypes from 'prop-types'
 import { ConfigWrapper, SelectWrapper as Select } from './styles'
 import { ThemeContext } from '../../../../theme'
 
-const ConfigDropdown = ({ show }) => {
+interface IConfigDropdown {
+  show: boolean
+}
+
+interface INameValue {
+  name: string
+  value: string
+}
+
+const ConfigDropdown: React.FC<IConfigDropdown> = ({ show }) => {
   const { t } = useTranslation('config')
   const [theme, setTheme] = useContext(ThemeContext)
 
@@ -25,7 +34,7 @@ const ConfigDropdown = ({ show }) => {
   )
 
   const renderLanguages = useCallback(() => {
-    const languages = t('languages', { returnObjects: true })
+    const languages: INameValue[] = t('languages', { returnObjects: true })
     return languages.map(({ name, value }) => (
       <MenuItem key={value} value={value}>
         {name}
@@ -34,7 +43,7 @@ const ConfigDropdown = ({ show }) => {
   }, [t])
 
   const renderThemes = useCallback(() => {
-    const themes = t('themes', { returnObjects: true })
+    const themes: INameValue[] = t('themes', { returnObjects: true })
     return themes.map(({ name, value }) => (
       <MenuItem key={value} value={value}>
         {name}

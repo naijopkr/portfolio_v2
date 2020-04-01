@@ -6,7 +6,7 @@ import Logo from './components/logo'
 import Config from './components/config'
 import Backdrop from '../shared/backdrop'
 
-const Menu = () => {
+const Menu: React.FC = () => {
   const [showConfig, setShowConfig] = useState(false)
   const toggleShowConfig = useCallback(() => {
     setShowConfig(!showConfig)
@@ -21,7 +21,7 @@ const Menu = () => {
         <Backdrop show={showConfig} onCancel={toggleShowConfig} />
         <SettingsIcon>
           <CogIcon onClick={toggleShowConfig} />
-          <Config show={showConfig} onCancel={toggleShowConfig} />
+          <Config show={showConfig} />
         </SettingsIcon>
       </div>
     </MenuWrapper>

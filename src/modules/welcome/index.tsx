@@ -4,9 +4,14 @@ import { useTranslation } from 'react-i18next'
 
 import { WelcomeWrapper } from './styles'
 
+interface IListItem {
+  icon: string
+  label: string
+}
+
 const Welcome = () => {
   const { t } = useTranslation('welcome')
-  const listItems = useMemo(() => t('welcome_items', { returnObjects: true }), [
+  const listItems: IListItem[] = useMemo(() => t('welcome_items', { returnObjects: true }), [
     t
   ])
 

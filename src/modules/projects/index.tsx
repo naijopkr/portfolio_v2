@@ -7,7 +7,7 @@ import Project from './components/project'
 const Projects = () => {
   const { t } = useTranslation('projects')
 
-  const [projects, setProjects] = useState([])
+  const [projects, setProjects] = useState<any[]>([])
   useEffect(() => {
     fetchProjects()
       .then(data => setProjects(data))
