@@ -22,7 +22,7 @@ const Projects = () => {
     }
 
     return projects.map(project => (
-      <Project key={project.id} project={project} />
+      <Project project={project} />
     ))
   }, [projects, t])
 

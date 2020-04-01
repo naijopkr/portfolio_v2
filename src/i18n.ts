@@ -6,7 +6,7 @@ import { pathOr } from 'ramda'
 
 import locales from './locales'
 
-const backend = (url, _options, callback) => {
+const backend = (url: string, _options: any, callback: any) => {
   const path = url.split('.')
   const locale = pathOr(null, path, locales)
   if (locale) {
@@ -29,7 +29,7 @@ i18n
       allowMultiLoading: false,
       crossDomain: false,
       loadPath: '{{ns}}.{{lng}}',
-      parse: data => data,
+      parse: (data: any) => data,
       withCredentials: false
     },
     interpolation: {
