@@ -1,15 +1,33 @@
 import React, { createContext, useState, useCallback } from 'react'
 import { ThemeProvider as StyledProvider } from 'styled-components'
-import PropTypes from 'prop-types'
 
 import colors from './colors'
+
+interface ITheme {
+  [key: string]: {
+    fonts: {
+      logo: string
+      normal: string
+    }
+    colors: {
+      background: string
+      fill: string
+      title: string
+      text: string
+      shadow: string
+      border: string
+      select_border: string
+      select_border_hover: string
+    }
+  }
+}
 
 const fonts = {
   logo: 'Margarine',
   normal: 'Cabin'
 }
 
-const THEMES = {
+const THEMES: ITheme = {
   light: {
     fonts,
     colors: {
@@ -59,9 +77,9 @@ if (!themeName || !THEMES[themeName]) {
 
 const INITIAL_THEME = THEMES[themeName]
 
-const ThemeContext = createContext()
+const ThemeContext = createContext<any>(null)
 
-const ThemeProvider = ({ children }) => {
+const ThemeProvider: React.FC = ({ children }) => {
   const [theme, setTheme] = useState({
     schema: INITIAL_THEME,
     name: themeName
@@ -84,10 +102,6 @@ const ThemeProvider = ({ children }) => {
       <StyledProvider theme={theme.schema}>{children}</StyledProvider>
     </ThemeContext.Provider>
   )
-}
-
-ThemeProvider.propTypes = {
-  children: PropTypes.node.isRequired
 }
 
 export { ThemeContext, ThemeProvider, THEMES }
