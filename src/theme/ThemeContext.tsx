@@ -4,30 +4,41 @@ import { ThemeProvider as StyledProvider } from 'styled-components'
 import colors from './colors'
 
 interface ITheme {
-  [key: string]: {
-    fonts: {
-      logo: string
-      normal: string
-    }
-    colors: {
-      background: string
-      fill: string
-      title: string
-      text: string
-      shadow: string
-      border: string
-      select_border: string
-      select_border_hover: string
-    }
+  fonts: {
+    logo: string
+    normal: string
+  }
+  colors: {
+    background: string
+    fill: string
+    title: string
+    text: string
+    shadow: string
+    border: string
+    select_border: string
+    select_border_hover: string
   }
 }
+
+interface IThemes {
+  [key: string]: ITheme
+}
+
+interface IThemeContext {
+  schema: ITheme
+  name: string
+}
+
+type THandleTheme = (newTheme: string) => void
+
+type TThemeContext = [IThemeContext, THandleTheme] | undefined
 
 const fonts = {
   logo: 'Margarine',
   normal: 'Cabin'
 }
 
-const THEMES: ITheme = {
+const THEMES: IThemes = {
   light: {
     fonts,
     colors: {
@@ -69,22 +80,22 @@ const THEMES: ITheme = {
   }
 }
 
-let themeName = localStorage.getItem('theme')
+let themeName = localStorage.getItem('theme') || ''
 if (!themeName || !THEMES[themeName]) {
   themeName = 'light'
   localStorage.setItem('theme', themeName)
 }
 
-const INITIAL_THEME = THEMES[themeName]
+const INITIAL_THEME: ITheme = THEMES[themeName]
 
-const ThemeContext = createContext<any>(null)
+const ThemeContext = createContext<TThemeContext>(undefined)
 
 const ThemeProvider: React.FC = ({ children }) => {
-  const [theme, setTheme] = useState({
+  const [theme, setTheme] = useState<IThemeContext>({
     schema: INITIAL_THEME,
     name: themeName
   })
-  const handleTheme = useCallback(newTheme => {
+  const handleTheme: THandleTheme = useCallback(newTheme => {
     const newThemeProps = THEMES[newTheme]
     if (newThemeProps) {
       localStorage.setItem('theme', newTheme)

@@ -6,14 +6,23 @@ import { pathOr } from 'ramda'
 
 import locales from './locales'
 
-const backend = (url: string, _options: any, callback: any) => {
+type TBackend = (
+  url: string,
+  options: object,
+  callback: (
+    locale: string | undefined,
+    response: {
+      status: string
+    }
+  ) => void
+) => void
+
+const backend: TBackend = (url, _options, callback) => {
   const path = url.split('.')
-  const locale = pathOr(null, path, locales)
-  if (locale) {
-    callback(locale, { status: '200' })
-  } else {
-    callback(null, { status: '404' })
-  }
+  const locale = pathOr(undefined, path, locales)
+  const status = locale ? '200' : '404'
+
+  callback(locale, { status })
 }
 
 i18n.languages = ['en', 'pt', 'es']
@@ -29,7 +38,7 @@ i18n
       allowMultiLoading: false,
       crossDomain: false,
       loadPath: '{{ns}}.{{lng}}',
-      parse: (data: any) => data,
+      parse: (data: object) => data,
       withCredentials: false
     },
     interpolation: {

@@ -3,7 +3,7 @@ import React from 'react'
 interface IProject {
   project: {
     id: number
-    name: string,
+    name: string
   }
 }
 

@@ -37,18 +37,45 @@ module.exports = {
       }
     }
   },
-  plugins: ['react'],
   rules: {
-    'react/jsx-filename-extension': [
-      1,
+    // @typescript-eslint
+    '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
+
+    '@typescript-eslint/member-delimiter-style': [
+      'error',
       {
-        extensions: ['.js', '.jsx', '.ts', '.tsx']
+        multiline: {
+          delimiter: 'none'
+        }
       }
     ],
-    semi: ['error', 'never'],
-    quotes: ['error', 'single'],
-    'comma-dangle': ['error', 'only-multiline'],
+
+    '@typescript-eslint/interface-name-prefix': [
+      'error',
+      {
+        prefixWithI: 'always'
+      }
+    ],
+
+    '@typescript-eslint/explicit-function-return-type': [
+      'error',
+      {
+        allowExpressions: true
+      }
+    ],
+
+    // general
     'arrow-parens': ['error', 'as-needed'],
+
+    'comma-dangle': ['error', 'only-multiline'],
+
+    'implicit-arrow-linebreak': 'off',
+
+    quotes: ['error', 'single'],
+
+    semi: ['error', 'never'],
+
+    // import
     'import/order': [
       'error',
       {
@@ -56,8 +83,9 @@ module.exports = {
         'newlines-between': 'always'
       }
     ],
-    'import/prefer-default-export': 0,
-    'implicit-arrow-linebreak': 0,
+
+    'import/prefer-default-export': 'off',
+
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -67,6 +95,16 @@ module.exports = {
         ts: 'never',
         tsx: 'never'
       }
-    ]
+    ],
+
+    // react
+    'react/jsx-filename-extension': [
+      'error',
+      {
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
+      }
+    ],
+
+    'react/prop-types': 'off'
   }
 }

@@ -9,11 +9,12 @@ interface IListItem {
   label: string
 }
 
-const Welcome = () => {
+const Welcome: React.FC = () => {
   const { t } = useTranslation('welcome')
-  const listItems: IListItem[] = useMemo(() => t('welcome_items', { returnObjects: true }), [
-    t
-  ])
+  const listItems: IListItem[] = useMemo(
+    () => t('welcome_items', { returnObjects: true }),
+    [t]
+  )
 
   const renderList = useCallback(
     () =>

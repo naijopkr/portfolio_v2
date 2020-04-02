@@ -7,7 +7,7 @@ import Projects from './modules/projects'
 import Welcome from './modules/welcome'
 import { StyledApp } from './styles'
 
-const App = () => (
+const App: React.FC = () => (
   <ThemeProvider>
     <StyledApp>
       <Menu />
