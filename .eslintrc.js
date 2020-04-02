@@ -9,12 +9,19 @@ module.exports = {
     'airbnb/hooks',
     'plugin:import/errors',
     'plugin:import/warnings',
-    'plugin:jsx-a11y/recommended'
+    'plugin:jsx-a11y/recommended',
+    'plugin:prettier/recommended',
+    'prettier/react',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended'
   ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
   },
+  parser: '@typescript-eslint/parser',
+  ignorePatterns: ['build/'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -23,8 +30,21 @@ module.exports = {
     sourceType: 'module',
     allowImportExportEverywhere: true
   },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
+      }
+    }
+  },
   plugins: ['react'],
   rules: {
+    'react/jsx-filename-extension': [
+      1,
+      {
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
+      }
+    ],
     semi: ['error', 'never'],
     quotes: ['error', 'single'],
     'comma-dangle': ['error', 'only-multiline'],
@@ -37,6 +57,16 @@ module.exports = {
       }
     ],
     'import/prefer-default-export': 0,
-    'implicit-arrow-linebreak': 0
+    'implicit-arrow-linebreak': 0,
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never'
+      }
+    ]
   }
 }
