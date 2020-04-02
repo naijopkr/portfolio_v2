@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import PropTypes from 'prop-types'
 
 import { BackdropWrapper } from './styles'
 
@@ -24,11 +23,6 @@ const Backdrop: React.FC<IBackdrop> = ({ show, onCancel }) => {
   }
 
   return <BackdropWrapper onClick={onCancel} />
-}
-
-Backdrop.propTypes = {
-  show: PropTypes.bool.isRequired,
-  onCancel: PropTypes.func.isRequired
 }
 
 export default Backdrop

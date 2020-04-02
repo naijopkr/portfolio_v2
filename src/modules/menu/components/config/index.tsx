@@ -2,7 +2,6 @@ import { MenuItem } from '@material-ui/core'
 import React, { useCallback, useContext } from 'react'
 import i18n from 'i18next'
 import { useTranslation } from 'react-i18next'
-import PropTypes from 'prop-types'
 
 import { ConfigWrapper, SelectWrapper as Select } from './styles'
 import { ThemeContext } from '../../../../theme'
@@ -63,7 +62,7 @@ const ConfigDropdown: React.FC<IConfigDropdown> = ({ show }) => {
           <Select
             name="language"
             onChange={handleLanguage}
-            defaultValue={i18n.language}
+            defaultValue={i18n.language.split('-')[0]}
           >
             {renderLanguages()}
           </Select>
@@ -77,10 +76,6 @@ const ConfigDropdown: React.FC<IConfigDropdown> = ({ show }) => {
       </ConfigWrapper>
     </>
   )
-}
-
-ConfigDropdown.propTypes = {
-  show: PropTypes.bool.isRequired
 }
 
 export default ConfigDropdown
