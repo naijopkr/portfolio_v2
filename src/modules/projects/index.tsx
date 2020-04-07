@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { fetchProjects } from '../../data/requests'
 import { IProject } from '../../data/interfaces'
 import Project from './components/project'
+import { ProjectsWrapper } from './styles'
 
 const Projects: React.FC = () => {
   const { t } = useTranslation('projects')
@@ -19,13 +20,13 @@ const Projects: React.FC = () => {
 
   const renderProjects = useCallback(() => {
     if (!projects.length) {
-      return <div>{t('no-projects-found')}</div>
+      return <div className="projects-notfound">{t('no-projects-found')}</div>
     }
 
     return projects.map(project => <Project project={project} />)
   }, [projects, t])
 
-  return <div>{renderProjects()}</div>
+  return <ProjectsWrapper>{renderProjects()}</ProjectsWrapper>
 }
 
 export default Projects

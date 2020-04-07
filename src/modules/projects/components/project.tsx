@@ -6,7 +6,6 @@ interface IProjectFC {
   project: IProject
 }
 
-// TODO: IMPLEMENT THIS
 const Project: React.FC<IProjectFC> = ({ project }) => {
   const renderTags = useCallback(() => {
     const { languages = [], frameworks = [], database = [] } = project

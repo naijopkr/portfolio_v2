@@ -17,6 +17,6 @@ export const StyledApp = styled.div`
     box-sizing: border-box;
 
     width: 100%;
-    padding: 32px;
+    height: calc(100vh - 64px);
   }
 `
