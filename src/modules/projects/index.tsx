@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { fetchProjects, IProject } from '../../data/requests'
+import { fetchProjects } from '../../data/requests'
+import { IProject } from '../../data/interfaces'
 import Project from './components/project'
 
 const Projects: React.FC = () => {

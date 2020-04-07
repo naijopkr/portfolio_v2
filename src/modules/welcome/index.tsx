@@ -1,6 +1,7 @@
 import { Icon } from '@material-ui/core'
 import React, { useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 import { WelcomeWrapper } from './styles'
 
@@ -37,9 +38,9 @@ const Welcome: React.FC = () => {
         {t('presentation', { name: 'Ariel Barcellos' })}
       </div>
       <ul className="body-list">{renderList()}</ul>
-      <a href="#projects" className="welcome-button">
+      <Link to="/projects" className="welcome-button">
         {t('go_to_projects')}
-      </a>
+      </Link>
     </WelcomeWrapper>
   )
 }

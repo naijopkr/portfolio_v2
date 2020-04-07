@@ -31,7 +31,7 @@ interface IThemeContext {
 
 type THandleTheme = (newTheme: string) => void
 
-type TThemeContext = [IThemeContext, THandleTheme] | undefined
+type TThemeContext = [IThemeContext, THandleTheme]
 
 const fonts = {
   logo: 'Margarine',
@@ -86,15 +86,17 @@ if (!themeName || !THEMES[themeName]) {
   localStorage.setItem('theme', themeName)
 }
 
-const INITIAL_THEME: ITheme = THEMES[themeName]
+const INITIAL_SCHEMA: ITheme = THEMES[themeName]
+const INITIAL_THEME: IThemeContext = {
+  schema: INITIAL_SCHEMA,
+  name: themeName
+}
 
-const ThemeContext = createContext<TThemeContext>(undefined)
+const ThemeContext = createContext<TThemeContext>([INITIAL_THEME, () => false])
 
 const ThemeProvider: React.FC = ({ children }) => {
-  const [theme, setTheme] = useState<IThemeContext>({
-    schema: INITIAL_THEME,
-    name: themeName
-  })
+  const [theme, setTheme] = useState<IThemeContext>(INITIAL_THEME)
+
   const handleTheme: THandleTheme = useCallback(newTheme => {
     const newThemeProps = THEMES[newTheme]
     if (newThemeProps) {

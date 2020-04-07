@@ -39,7 +39,13 @@ module.exports = {
   },
   rules: {
     // @typescript-eslint
-    '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
+    '@typescript-eslint/camelcase': [
+      'error',
+      {
+        properties: 'never',
+        ignoreDestructuring: true
+      }
+    ],
 
     '@typescript-eslint/member-delimiter-style': [
       'error',
