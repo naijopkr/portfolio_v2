@@ -23,7 +23,9 @@ const Projects: React.FC = () => {
       return <div className="projects-notfound">{t('no-projects-found')}</div>
     }
 
-    return projects.map(project => <Project project={project} />)
+    return projects.map(project => (
+      <Project project={project} key={project.id} />
+    ))
   }, [projects, t])
 
   return <ProjectsWrapper>{renderProjects()}</ProjectsWrapper>

@@ -14,6 +14,7 @@ interface ITheme {
     title: string
     text: string
     shadow: string
+    shadow_project: string
     border: string
     select_border: string
     select_border_hover: string
@@ -47,6 +48,7 @@ const THEMES: IThemes = {
       title: colors.green_1,
       text: colors.blue_1,
       shadow: colors.black_2,
+      shadow_project: colors.purple_5,
       border: colors.gray_3,
       select_border: colors.blue_2,
       select_border_hover: colors.blue_3
@@ -60,6 +62,7 @@ const THEMES: IThemes = {
       title: colors.green_1,
       text: colors.purple_2,
       shadow: colors.black_2,
+      shadow_project: colors.purple_5,
       border: colors.gray_4,
       select_border: colors.purple_3,
       select_border_hover: colors.purple_4
@@ -73,6 +76,7 @@ const THEMES: IThemes = {
       title: colors.green_4,
       text: colors.green_4,
       shadow: colors.gray_1,
+      shadow_project: colors.purple_5,
       border: colors.gray_1,
       select_border: colors.green_4,
       select_border_hover: colors.green_4
