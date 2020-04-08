@@ -12,6 +12,8 @@ const Menu: React.FC = () => {
     setShowConfig(!showConfig)
   }, [showConfig])
 
+  const handleClose = useCallback(() => setShowConfig(false), [])
+
   return (
     <MenuWrapper>
       <div className="left">
@@ -21,7 +23,7 @@ const Menu: React.FC = () => {
         <Backdrop show={showConfig} onCancel={toggleShowConfig} />
         <SettingsIcon>
           <CogIcon onClick={toggleShowConfig} />
-          <Config show={showConfig} />
+          <Config show={showConfig} onSelect={handleClose} />
         </SettingsIcon>
       </div>
     </MenuWrapper>

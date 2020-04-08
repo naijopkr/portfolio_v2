@@ -8,6 +8,7 @@ import { ThemeContext } from '../../../../theme'
 
 interface IConfigDropdown {
   show: boolean
+  onSelect?: () => void
 }
 
 interface INameValue {
@@ -15,21 +16,30 @@ interface INameValue {
   value: string
 }
 
-const ConfigDropdown: React.FC<IConfigDropdown> = ({ show }) => {
+const ConfigDropdown: React.FC<IConfigDropdown> = ({ show, onSelect }) => {
   const { t } = useTranslation('config')
   const [theme, setTheme] = useContext(ThemeContext)
 
-  const handleLanguage = useCallback(evt => {
-    const lng = evt.target.value
-    i18n.changeLanguage(lng)
-  }, [])
+  const handleLanguage = useCallback(
+    evt => {
+      const lng = evt.target.value
+      i18n.changeLanguage(lng)
+      if (onSelect) {
+        onSelect()
+      }
+    },
+    [onSelect]
+  )
 
   const handleTheme = useCallback(
     evt => {
       const newTheme = evt.target.value
       setTheme(newTheme)
+      if (onSelect) {
+        onSelect()
+      }
     },
-    [setTheme]
+    [setTheme, onSelect]
   )
 
   const renderLanguages = useCallback(() => {
