@@ -7,7 +7,7 @@
         "github": "https://github.com/naijopkr/credit-card-generator"
       },
       "description": "Python module to validate and generate credit card numbers",
-      "languages": ["Python"],
+      "language": "Python",
       "updated_at": "2020-04-09T19:54:18Z"
     },
     {
@@ -17,7 +17,7 @@
         "github": "https://github.com/naijopkr/password-generator"
       },
       "description": "Python module to generate secure passwords",
-      "languages": ["Python"],
+      "language": "Python",
       "updated_at": "2020-03-27T20:46:58Z"
     },
     {
@@ -27,7 +27,7 @@
         "github": "https://github.com/naijopkr/caesar-cipher"
       },
       "description": "A small demonstration of the caesar cipher using python.",
-      "languages": ["Python"],
+      "language": "Python",
       "updated_at": "2020-03-27T14:47:27Z"
     },
     {
@@ -37,7 +37,7 @@
         "github": "https://github.com/naijopkr/lowest-common-multiple"
       },
       "description": "Python module to find the lowest commom multiple between two numbers",
-      "languages": ["Python"],
+      "language": "Python",
       "updated_at": "2020-03-27T14:20:24Z"
     },
     {
@@ -47,7 +47,7 @@
         "github": "https://github.com/naijopkr/prime-factorization"
       },
       "description": "A module that receives an integer and returns the prime factors of this number.",
-      "languages": ["Python"],
+      "language": "Python",
       "updated_at": "2020-03-26T21:43:34Z"
     },
     {
@@ -57,7 +57,7 @@
         "github": "https://github.com/naijopkr/init-python-env"
       },
       "description": "Shell script to create and activate python virtual environment with .gitignore and __main__.py files.",
-      "languages": ["Shell"],
+      "language": "Shell",
       "updated_at": "2020-03-26T20:37:23Z"
     },
     {
@@ -67,7 +67,7 @@
         "github": "https://github.com/naijopkr/get-prime-number"
       },
       "description": "Simple implementation of function to get prime number in python.",
-      "languages": ["Python"],
+      "language": "Python",
       "updated_at": "2020-03-25T15:13:39Z"
     },
     {
@@ -77,7 +77,7 @@
         "github": "https://github.com/naijopkr/fetch-github"
       },
       "description": "Simple script to fetch public data from GitHub",
-      "languages": ["JavaScript"],
+      "language": "JavaScript",
       "updated_at": "2020-03-24T19:58:57Z"
     },
     {
@@ -87,7 +87,7 @@
         "github": "https://github.com/naijopkr/blackjack"
       },
       "description": "Simple game of Blackjack made wity Python",
-      "languages": ["Python"],
+      "language": "Python",
       "updated_at": "2020-03-12T15:19:32Z"
     },
     {
@@ -97,7 +97,7 @@
         "github": "https://github.com/naijopkr/tic-tac-toe"
       },
       "description": "Super Tic Tac Toe python project to play enjoy modular arithmetic. (Better interface coming soon!)",
-      "languages": ["Python"],
+      "language": "Python",
       "updated_at": "2020-03-03T16:30:10Z"
     },
     {
@@ -107,7 +107,7 @@
         "github": "https://github.com/naijopkr/open-quizz"
       },
       "description": "Platform for creating and taking quizz",
-      "languages": ["JavaScript"],
+      "language": "JavaScript",
       "frameworks": ["React", "Express"],
       "database": ["MongoDB"],
       "updated_at": "2019-05-29T19:06:49Z"
@@ -119,7 +119,7 @@
         "github": "https://github.com/naijopkr/recurring-character"
       },
       "description": "A function that get a string as argument and returns the first recurring character",
-      "languages": ["JavaScript"],
+      "language": "JavaScript",
       "updated_at": "2019-04-05T15:58:34Z"
     },
     {
@@ -129,7 +129,7 @@
         "github": "https://github.com/naijopkr/longest-subsequence-example"
       },
       "description": "Replication of a problem from an interview with Google engineer.",
-      "languages": ["JavaScript"],
+      "language": "JavaScript",
       "updated_at": "2019-03-29T22:57:45Z"
     },
     {
@@ -139,7 +139,7 @@
         "github": "https://github.com/naijopkr/gmap-api-example"
       },
       "description": "Sample of Google Maps API usage",
-      "languages": ["JavaScript"],
+      "language": "JavaScript",
       "frameworks": ["React"],
       "updated_at": "2019-03-29T20:54:17Z"
     },
@@ -150,7 +150,7 @@
         "github": "https://github.com/naijopkr/redux-training"
       },
       "description": "JavaScript training: How Redux works.",
-      "languages": ["JavaScript"],
+      "language": "JavaScript",
       "frameworks": ["React"],
       "updated_at": "2019-03-25T21:26:27Z"
     },
@@ -161,7 +161,7 @@
         "github": "https://github.com/naijopkr/video-convert"
       },
       "description": "Simple electron app to convert video formats",
-      "languages": ["JavaScript"],
+      "language": "JavaScript",
       "frameworks": ["Electron", "React"],
       "updated_at": "2019-02-19T00:29:47Z"
     },
@@ -172,7 +172,7 @@
         "github": "https://github.com/naijopkr/edi-simulation"
       },
       "description": "Simulation of Electronic Data Interchange in a supply chain using Node.js and JSON",
-      "languages": ["JavaScript"],
+      "language": "JavaScript",
       "frameworks": ["Express"],
       "updated_at": "2019-02-15T02:17:42Z"
     },
@@ -183,7 +183,7 @@
         "github": "https://github.com/naijopkr/WeddingApp"
       },
       "description": "Single page application built with React to manage a wedding page.",
-      "languages": ["JavaScript"],
+      "language": "JavaScript",
       "frameworks": ["React", "Express"],
       "database": ["MongoDB"],
       "updated_at": "2019-02-13T23:49:27Z"
@@ -195,7 +195,7 @@
         "github": "https://github.com/naijopkr/tasky"
       },
       "description": "Simple task app for electron training",
-      "languages": ["JavaScript"],
+      "language": "JavaScript",
       "frameworks": ["Electron", "React"],
       "updated_at": "2019-01-30T01:37:43Z"
     },
@@ -206,7 +206,7 @@
         "github": "https://github.com/naijopkr/todo-electron-sample"
       },
       "description": "Just a sample to do list app written with electron",
-      "languages": ["JavaScript"],
+      "language": "JavaScript",
       "frameworks": ["React", "Electron"],
       "updated_at": "2019-01-18T00:11:15Z"
     },
@@ -217,7 +217,7 @@
         "github": "https://github.com/naijopkr/react-color-game"
       },
       "description": "Guess the color based on its RGB code.",
-      "languages": ["JavaScript"],
+      "language": "JavaScript",
       "frameworks": ["React"],
       "updated_at": "2019-01-08T23:46:45Z"
     },
@@ -228,7 +228,7 @@
         "github": "https://github.com/naijopkr/video-info"
       },
       "description": "Simple Electron app for retrieving duration of a video file.",
-      "languages": ["JavaScript"],
+      "language": "JavaScript",
       "frameworks": ["Electron"],
       "updated_at": "2019-01-03T21:07:15Z"
     },
@@ -239,7 +239,7 @@
         "github": "https://github.com/naijopkr/AdvancedReactRedux"
       },
       "description": "Advanced React and Redux course",
-      "languages": ["JavaScript"],
+      "language": "JavaScript",
       "frameworks": ["React"],
       "updated_at": "2018-12-12T00:31:25Z"
     },
@@ -250,7 +250,7 @@
         "github": "https://github.com/naijopkr/react-buger-app"
       },
       "description": "Burger Builder app",
-      "languages": ["JavaScript"],
+      "language": "JavaScript",
       "frameworks": ["React"],
       "updated_at": "2018-11-20T17:31:41Z"
     },
@@ -261,7 +261,7 @@
         "github": "https://github.com/naijopkr/mc-node-assignment"
       },
       "description": "This is a short coding assignment to implement an API in Node.js that calls a \"backend API\" to get information about crash test ratings for vehicles.",
-      "languages": ["JavaScript"],
+      "language": "JavaScript",
       "frameworks": ["Express"],
       "updated_at": "2018-11-08T20:04:45Z"
     },
@@ -272,7 +272,7 @@
         "github": "https://github.com/naijopkr/dotnet-todo"
       },
       "description": "Simple API using .NET Core",
-      "languages": ["C#"],
+      "language": "C#",
       "frameworks": [".NET Core"],
       "updated_at": "2018-10-19T18:15:25Z"
     },
@@ -283,7 +283,7 @@
         "github": "https://github.com/naijopkr/javascript-counter"
       },
       "description": "Simple to implement javascript counter",
-      "languages": ["JavaScript"],
+      "language": "JavaScript",
       "updated_at": "2018-10-09T03:10:39Z"
     },
     {
@@ -293,7 +293,7 @@
         "github": "https://github.com/naijopkr/circlesProject"
       },
       "description": "Patatap clone as a exercise for WebDev Bootcamp",
-      "languages": ["JavaScript"],
+      "language": "JavaScript",
       "updated_at": "2017-08-16T16:54:28Z"
     },
     {
@@ -303,7 +303,7 @@
         "github": "https://github.com/naijopkr/colorGame"
       },
       "description": "Just a fun RGB game.",
-      "languages": ["JavaScript"],
+      "language": "JavaScript",
       "updated_at": "2017-08-04T19:05:49Z"
     }
   ]

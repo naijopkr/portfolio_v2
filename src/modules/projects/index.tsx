@@ -5,17 +5,21 @@ import { fetchProjects } from '../../data/requests'
 import { IProject } from '../../data/interfaces'
 import Project from './components/project'
 import { ProjectsWrapper } from './styles'
-
-interface IFilters {
-  languages: Set<string>
-  frameworks: Set<string>
-  database: Set<string>
-}
+import Filters, { IFilters } from './components/filters'
 
 const Projects: React.FC = () => {
   const { t } = useTranslation('projects')
 
-  const [filters, setFilters] = useState<IFilters>()
+  const [selectedFilters /* selectFilters */] = useState<IFilters>({
+    languages: new Set(),
+    frameworks: new Set(),
+    database: new Set()
+  })
+  const [filters, setFilters] = useState<IFilters>({
+    languages: new Set(),
+    frameworks: new Set(),
+    database: new Set()
+  })
   const [projects, setProjects] = useState<IProject[]>([])
 
   useEffect(() => {
@@ -28,19 +32,22 @@ const Projects: React.FC = () => {
 
   useEffect(() => {
     const langArray = projects.reduce((pv: string[], cv) => {
-      const { languages } = cv
-      if (!languages || !languages.length) {
-        return pv
-      }
-      return [...pv, ...languages]
+      const { language } = cv
+
+      return [...pv, language]
     }, [])
 
-    const frameworkArray = projects.reduce((pv: string[], cv) => {
-      const { frameworks } = cv
+    const frameworkArray: string[] = projects.reduce((pv: string[], cv) => {
+      const { frameworks, language } = cv
       if (!frameworks || !frameworks.length) {
         return pv
       }
-      return [...pv, ...frameworks]
+
+      const newFrameworks: string[] = frameworks.map(fw => {
+        return `${language}/${fw}`
+      })
+
+      return [...pv, ...newFrameworks]
     }, [])
 
     const databaseArray = projects.reduce((pv: string[], cv) => {
@@ -62,10 +69,6 @@ const Projects: React.FC = () => {
     })
   }, [projects])
 
-  useEffect(() => {
-    console.log(filters) // eslint-disable-line
-  }, [filters])
-
   const renderProjects = useCallback(() => {
     if (!projects.length) {
       return <div className="projects-notfound">{t('no-projects-found')}</div>
@@ -76,7 +79,12 @@ const Projects: React.FC = () => {
     ))
   }, [projects, t])
 
-  return <ProjectsWrapper>{renderProjects()}</ProjectsWrapper>
+  return (
+    <ProjectsWrapper>
+      <Filters filters={filters} selectedFilters={selectedFilters} />
+      {renderProjects()}
+    </ProjectsWrapper>
+  )
 }
 
 export default Projects

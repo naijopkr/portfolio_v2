@@ -86,3 +86,7 @@ export const TagWrapper = styled.div`
     color: ${({ theme }) => theme.colors.background};
   }
 `
+
+export const FiltersWrapper = styled.div`
+  width: 100%;
+`

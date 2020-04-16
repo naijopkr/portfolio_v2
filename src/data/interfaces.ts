@@ -5,7 +5,7 @@ export interface IProject {
     [key: string]: string
   }
   description: string
-  languages?: string[]
+  language: string
   frameworks?: string[]
   database?: string[]
   updated_at: string

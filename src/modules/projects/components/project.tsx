@@ -14,9 +14,9 @@ const ICONS: { [key: string]: JSX.Element } = {
 
 const Project: React.FC<IProjectFC> = ({ project }) => {
   const renderTags = useCallback(() => {
-    const { languages = [], frameworks = [], database = [] } = project
+    const { language = '', frameworks = [], database = [] } = project
 
-    const tags = [...languages, ...frameworks, ...database]
+    const tags = [language, ...frameworks, ...database]
     return tags.map(tag => <Tag label={tag} key={tag} />)
   }, [project])
 
