@@ -1,6 +1,16 @@
 {
   "projects": [
     {
+      "id": 252846285,
+      "name": "credit-card-generator",
+      "published_on": {
+        "github": "https://github.com/naijopkr/credit-card-generator"
+      },
+      "description": "Python module to validate and generate credit card numbers",
+      "languages": ["Python"],
+      "updated_at": "2020-04-09T19:54:18Z"
+    },
+    {
       "id": 250640291,
       "name": "password-generator",
       "published_on": {
