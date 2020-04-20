@@ -10,7 +10,7 @@ import Filters, { IFilters } from './components/filters'
 const Projects: React.FC = () => {
   const { t } = useTranslation('projects')
 
-  const [selectedFilters /* selectFilters */] = useState<IFilters>({
+  const [selectedFilters, selectFilters] = useState<IFilters>({
     languages: new Set(),
     frameworks: new Set(),
     database: new Set()
@@ -22,6 +22,7 @@ const Projects: React.FC = () => {
   })
   const [projects, setProjects] = useState<IProject[]>([])
 
+  // FETCH PROJECTS
   useEffect(() => {
     fetchProjects()
       .then(data => setProjects(data))
@@ -30,6 +31,7 @@ const Projects: React.FC = () => {
       })
   }, [])
 
+  // FETCH FILTERS
   useEffect(() => {
     const langArray = projects.reduce((pv: string[], cv) => {
       const { language } = cv
@@ -38,16 +40,12 @@ const Projects: React.FC = () => {
     }, [])
 
     const frameworkArray: string[] = projects.reduce((pv: string[], cv) => {
-      const { frameworks, language } = cv
+      const { frameworks } = cv
       if (!frameworks || !frameworks.length) {
         return pv
       }
 
-      const newFrameworks: string[] = frameworks.map(fw => {
-        return `${language}/${fw}`
-      })
-
-      return [...pv, ...newFrameworks]
+      return [...pv, ...frameworks]
     }, [])
 
     const databaseArray = projects.reduce((pv: string[], cv) => {
@@ -55,6 +53,7 @@ const Projects: React.FC = () => {
       if (!database || !database.length) {
         return pv
       }
+
       return [...pv, ...database]
     }, [])
 
@@ -69,6 +68,21 @@ const Projects: React.FC = () => {
     })
   }, [projects])
 
+  const handleFilters = useCallback(
+    (filterCategory: keyof IFilters, filterName: string) => {
+      const newFilters = { ...selectedFilters }
+
+      if (newFilters[filterCategory].has(filterName)) {
+        newFilters[filterCategory].delete(filterName)
+      } else {
+        newFilters[filterCategory].add(filterName)
+      }
+
+      selectFilters(newFilters)
+    },
+    [selectedFilters]
+  )
+
   const renderProjects = useCallback(() => {
     if (!projects.length) {
       return <div className="projects-notfound">{t('no-projects-found')}</div>
@@ -81,7 +95,11 @@ const Projects: React.FC = () => {
 
   return (
     <ProjectsWrapper>
-      <Filters filters={filters} selectedFilters={selectedFilters} />
+      <Filters
+        filters={filters}
+        selectedFilters={selectedFilters}
+        selectFilters={handleFilters}
+      />
       {renderProjects()}
     </ProjectsWrapper>
   )

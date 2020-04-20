@@ -13,11 +13,13 @@ export interface IFilters {
 interface IFiltersProps {
   filters: IFilters
   selectedFilters: IFilters
+  selectFilters: (type: keyof IFilters, filter: string) => void
 }
 
 const Filters: React.FC<IFiltersProps> = ({
-  filters
-  // selectedFilters
+  filters,
+  selectFilters,
+  selectedFilters
 }) => {
   const { t } = useTranslation('filters')
 
@@ -29,16 +31,30 @@ const Filters: React.FC<IFiltersProps> = ({
     const { languages, frameworks, database } = filters
 
     const langFilters = Array.from(languages).map(language => (
-      <Tag label={language} key={language} />
+      <Tag
+        onClick={() => selectFilters('languages', language)}
+        label={language}
+        key={language}
+        active={selectedFilters.languages.has(language)}
+      />
     ))
 
-    const frameworksFilters = Array.from(frameworks).map(framework => {
-      const fwName = framework.split('/')[1]
-      return <Tag label={fwName} key={framework} />
-    })
+    const frameworksFilters = Array.from(frameworks).map(framework => (
+      <Tag
+        label={framework}
+        key={framework}
+        onClick={() => selectFilters('frameworks', framework)}
+        active={selectedFilters.frameworks.has(framework)}
+      />
+    ))
 
     const databaseFilters = Array.from(database).map(db => (
-      <Tag label={db} key={db} />
+      <Tag
+        onClick={() => selectFilters('database', db)}
+        active={selectedFilters.database.has(db)}
+        label={db}
+        key={db}
+      />
     ))
 
     return (
@@ -52,7 +68,7 @@ const Filters: React.FC<IFiltersProps> = ({
         <div className="filters-tags">{databaseFilters}</div>
       </>
     )
-  }, [filters, t])
+  }, [filters, t, selectFilters, selectedFilters])
 
   return <FiltersWrapper>{renderTags()}</FiltersWrapper>
 }
