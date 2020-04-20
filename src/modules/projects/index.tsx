@@ -88,10 +88,47 @@ const Projects: React.FC = () => {
       return <div className="projects-notfound">{t('no-projects-found')}</div>
     }
 
-    return projects.map(project => (
-      <Project project={project} key={project.id} />
-    ))
-  }, [projects, t])
+    return projects.map(project => {
+      const { languages, frameworks, database } = selectedFilters
+
+      const isFiltered = languages.size || frameworks.size || database.size
+
+      const ProjectComponent = (
+        <Project
+          project={project}
+          key={project.id}
+          selectFilters={handleFilters}
+          selectedFilters={selectedFilters}
+        />
+      )
+
+      if (isFiltered) {
+        if (languages.has(project.language)) {
+          return ProjectComponent
+        }
+
+        const frameworkIntersection = project.frameworks?.filter(fw =>
+          frameworks.has(fw)
+        )
+
+        if (frameworkIntersection?.length) {
+          return ProjectComponent
+        }
+
+        const databaseIntersection = project.database?.filter(db =>
+          database.has(db)
+        )
+
+        if (databaseIntersection?.length) {
+          return ProjectComponent
+        }
+
+        return null
+      }
+
+      return ProjectComponent
+    })
+  }, [projects, t, selectedFilters, handleFilters])
 
   return (
     <ProjectsWrapper>

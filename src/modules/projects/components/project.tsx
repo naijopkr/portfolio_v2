@@ -2,23 +2,56 @@ import React, { useCallback } from 'react'
 import { GitHub } from '@material-ui/icons'
 
 import { IProject } from '../../../data/interfaces'
+import { IFilters } from './filters'
 import Tag from './tag'
 
 interface IProjectFC {
   project: IProject
+  selectedFilters: IFilters
+  selectFilters: (type: keyof IFilters, filter: string) => void
 }
 
 const ICONS: { [key: string]: JSX.Element } = {
   github: <GitHub />
 }
 
-const Project: React.FC<IProjectFC> = ({ project }) => {
+const Project: React.FC<IProjectFC> = ({
+  project,
+  selectFilters,
+  selectedFilters
+}) => {
   const renderTags = useCallback(() => {
     const { language = '', frameworks = [], database = [] } = project
 
-    const tags = [language, ...frameworks, ...database]
-    return tags.map(tag => <Tag label={tag} key={tag} />)
-  }, [project])
+    const languageTag = [
+      <Tag
+        label={language}
+        key={`lang-${language}`}
+        onClick={() => selectFilters('languages', language)}
+        active={selectedFilters.languages.has(language)}
+      />
+    ]
+
+    const frameworksTags = frameworks.map(fw => (
+      <Tag
+        label={fw}
+        key={`fw-${fw}`}
+        onClick={() => selectFilters('frameworks', fw)}
+        active={selectedFilters.frameworks.has(fw)}
+      />
+    ))
+
+    const databaseTags = database.map(db => (
+      <Tag
+        label={db}
+        key={`db-${db}`}
+        onClick={() => selectFilters('database', db)}
+        active={selectedFilters.database.has(db)}
+      />
+    ))
+
+    return [...languageTag, ...frameworksTags, ...databaseTags]
+  }, [project, selectFilters, selectedFilters])
 
   const renderLinks = useCallback(() => {
     const { published_on } = project
