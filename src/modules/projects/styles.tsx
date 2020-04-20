@@ -89,4 +89,33 @@ export const TagWrapper = styled.div`
 
 export const FiltersWrapper = styled.div`
   width: 100%;
+  margin: 0 10px;
+  padding: 34px;
+  border: 1px solid ${({ theme }) => theme.colors.border};
+
+  .filters-title {
+    font-family: ${({ theme }) => theme.fonts.normal};
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 21px;
+  }
+
+  .filters-tags {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: ${({ theme }) => theme.fonts.normal};
+    font-size: 14px;
+    margin-bottom: 21px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .filters-labels {
+    margin-bottom: 13px;
+    font-family: ${({ theme }) => theme.fonts.normal};
+    font-size: 14px;
+    text-transform: uppercase;
+  }
 `

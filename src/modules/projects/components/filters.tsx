@@ -43,12 +43,13 @@ const Filters: React.FC<IFiltersProps> = ({
 
     return (
       <>
-        <div>{t('languages')}</div>
-        <div>{langFilters}</div>
-        <div>{t('frameworks')}</div>
-        <div>{frameworksFilters}</div>
-        <div>{t('databases')}</div>
-        <div>{databaseFilters}</div>
+        <div className="filters-title">{t('filters')}</div>
+        <div className="filters-labels">{t('languages')}</div>
+        <div className="filters-tags">{langFilters}</div>
+        <div className="filters-labels">{t('frameworks')}</div>
+        <div className="filters-tags">{frameworksFilters}</div>
+        <div className="filters-labels">{t('databases')}</div>
+        <div className="filters-tags">{databaseFilters}</div>
       </>
     )
   }, [filters, t])
