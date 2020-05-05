@@ -1,310 +1,308 @@
-{
-  "projects": [
-    {
-      "id": 252846285,
-      "name": "credit-card-generator",
-      "published_on": {
-        "github": "https://github.com/naijopkr/credit-card-generator"
-      },
-      "description": "Python module to validate and generate credit card numbers",
-      "language": "Python",
-      "updated_at": "2020-04-09T19:54:18Z"
+[
+  {
+    "id": 252846285,
+    "name": "credit-card-generator",
+    "published_on": {
+      "github": "https://github.com/naijopkr/credit-card-generator"
     },
-    {
-      "id": 250640291,
-      "name": "password-generator",
-      "published_on": {
-        "github": "https://github.com/naijopkr/password-generator"
-      },
-      "description": "Python module to generate secure passwords",
-      "language": "Python",
-      "updated_at": "2020-03-27T20:46:58Z"
+    "description": "Python module to validate and generate credit card numbers",
+    "language": "Python",
+    "updated_at": "2020-04-09T19:54:18Z"
+  },
+  {
+    "id": 250640291,
+    "name": "password-generator",
+    "published_on": {
+      "github": "https://github.com/naijopkr/password-generator"
     },
-    {
-      "id": 249736752,
-      "name": "caesar-cipher",
-      "published_on": {
-        "github": "https://github.com/naijopkr/caesar-cipher"
-      },
-      "description": "A small demonstration of the caesar cipher using python.",
-      "language": "Python",
-      "updated_at": "2020-03-27T14:47:27Z"
+    "description": "Python module to generate secure passwords",
+    "language": "Python",
+    "updated_at": "2020-03-27T20:46:58Z"
+  },
+  {
+    "id": 249736752,
+    "name": "caesar-cipher",
+    "published_on": {
+      "github": "https://github.com/naijopkr/caesar-cipher"
     },
-    {
-      "id": 250382179,
-      "name": "lowest-common-multiple",
-      "published_on": {
-        "github": "https://github.com/naijopkr/lowest-common-multiple"
-      },
-      "description": "Python module to find the lowest commom multiple between two numbers",
-      "language": "Python",
-      "updated_at": "2020-03-27T14:20:24Z"
+    "description": "A small demonstration of the caesar cipher using python.",
+    "language": "Python",
+    "updated_at": "2020-03-27T14:47:27Z"
+  },
+  {
+    "id": 250382179,
+    "name": "lowest-common-multiple",
+    "published_on": {
+      "github": "https://github.com/naijopkr/lowest-common-multiple"
     },
-    {
-      "id": 250352635,
-      "name": "prime-factorization",
-      "published_on": {
-        "github": "https://github.com/naijopkr/prime-factorization"
-      },
-      "description": "A module that receives an integer and returns the prime factors of this number.",
-      "language": "Python",
-      "updated_at": "2020-03-26T21:43:34Z"
+    "description": "Python module to find the lowest commom multiple between two numbers",
+    "language": "Python",
+    "updated_at": "2020-03-27T14:20:24Z"
+  },
+  {
+    "id": 250352635,
+    "name": "prime-factorization",
+    "published_on": {
+      "github": "https://github.com/naijopkr/prime-factorization"
     },
-    {
-      "id": 250366198,
-      "name": "init-python-env",
-      "published_on": {
-        "github": "https://github.com/naijopkr/init-python-env"
-      },
-      "description": "Shell script to create and activate python virtual environment with .gitignore and __main__.py files.",
-      "language": "Shell",
-      "updated_at": "2020-03-26T20:37:23Z"
+    "description": "A module that receives an integer and returns the prime factors of this number.",
+    "language": "Python",
+    "updated_at": "2020-03-26T21:43:34Z"
+  },
+  {
+    "id": 250366198,
+    "name": "init-python-env",
+    "published_on": {
+      "github": "https://github.com/naijopkr/init-python-env"
     },
-    {
-      "id": 248051658,
-      "name": "get-prime-number",
-      "published_on": {
-        "github": "https://github.com/naijopkr/get-prime-number"
-      },
-      "description": "Simple implementation of function to get prime number in python.",
-      "language": "Python",
-      "updated_at": "2020-03-25T15:13:39Z"
+    "description": "Shell script to create and activate python virtual environment with .gitignore and __main__.py files.",
+    "language": "Shell",
+    "updated_at": "2020-03-26T20:37:23Z"
+  },
+  {
+    "id": 248051658,
+    "name": "get-prime-number",
+    "published_on": {
+      "github": "https://github.com/naijopkr/get-prime-number"
     },
-    {
-      "id": 249803781,
-      "name": "fetch-github",
-      "published_on": {
-        "github": "https://github.com/naijopkr/fetch-github"
-      },
-      "description": "Simple script to fetch public data from GitHub",
-      "language": "JavaScript",
-      "updated_at": "2020-03-24T19:58:57Z"
+    "description": "Simple implementation of function to get prime number in python.",
+    "language": "Python",
+    "updated_at": "2020-03-25T15:13:39Z"
+  },
+  {
+    "id": 249803781,
+    "name": "fetch-github",
+    "published_on": {
+      "github": "https://github.com/naijopkr/fetch-github"
     },
-    {
-      "id": 246079462,
-      "name": "blackjack",
-      "published_on": {
-        "github": "https://github.com/naijopkr/blackjack"
-      },
-      "description": "Simple game of Blackjack made wity Python",
-      "language": "Python",
-      "updated_at": "2020-03-12T15:19:32Z"
+    "description": "Simple script to fetch public data from GitHub",
+    "language": "JavaScript",
+    "updated_at": "2020-03-24T19:58:57Z"
+  },
+  {
+    "id": 246079462,
+    "name": "blackjack",
+    "published_on": {
+      "github": "https://github.com/naijopkr/blackjack"
     },
-    {
-      "id": 234210816,
-      "name": "tic-tac-toe",
-      "published_on": {
-        "github": "https://github.com/naijopkr/tic-tac-toe"
-      },
-      "description": "Super Tic Tac Toe python project to play enjoy modular arithmetic. (Better interface coming soon!)",
-      "language": "Python",
-      "updated_at": "2020-03-03T16:30:10Z"
+    "description": "Simple game of Blackjack made wity Python",
+    "language": "Python",
+    "updated_at": "2020-03-12T15:19:32Z"
+  },
+  {
+    "id": 234210816,
+    "name": "tic-tac-toe",
+    "published_on": {
+      "github": "https://github.com/naijopkr/tic-tac-toe"
     },
-    {
-      "id": 162344182,
-      "name": "open-quizz",
-      "published_on": {
-        "github": "https://github.com/naijopkr/open-quizz"
-      },
-      "description": "Platform for creating and taking quizz",
-      "language": "JavaScript",
-      "frameworks": ["React", "Express"],
-      "database": ["MongoDB"],
-      "updated_at": "2019-05-29T19:06:49Z"
+    "description": "Super Tic Tac Toe python project to play enjoy modular arithmetic. (Better interface coming soon!)",
+    "language": "Python",
+    "updated_at": "2020-03-03T16:30:10Z"
+  },
+  {
+    "id": 162344182,
+    "name": "open-quizz",
+    "published_on": {
+      "github": "https://github.com/naijopkr/open-quizz"
     },
-    {
-      "id": 179703022,
-      "name": "recurring-character",
-      "published_on": {
-        "github": "https://github.com/naijopkr/recurring-character"
-      },
-      "description": "A function that get a string as argument and returns the first recurring character",
-      "language": "JavaScript",
-      "updated_at": "2019-04-05T15:58:34Z"
+    "description": "Platform for creating and taking quizz",
+    "language": "JavaScript",
+    "frameworks": ["React", "Express"],
+    "database": ["MongoDB"],
+    "updated_at": "2019-05-29T19:06:49Z"
+  },
+  {
+    "id": 179703022,
+    "name": "recurring-character",
+    "published_on": {
+      "github": "https://github.com/naijopkr/recurring-character"
     },
-    {
-      "id": 178485316,
-      "name": "longest-subsequence-example",
-      "published_on": {
-        "github": "https://github.com/naijopkr/longest-subsequence-example"
-      },
-      "description": "Replication of a problem from an interview with Google engineer.",
-      "language": "JavaScript",
-      "updated_at": "2019-03-29T22:57:45Z"
+    "description": "A function that get a string as argument and returns the first recurring character",
+    "language": "JavaScript",
+    "updated_at": "2019-04-05T15:58:34Z"
+  },
+  {
+    "id": 178485316,
+    "name": "longest-subsequence-example",
+    "published_on": {
+      "github": "https://github.com/naijopkr/longest-subsequence-example"
     },
-    {
-      "id": 176578477,
-      "name": "gmap-api-example",
-      "published_on": {
-        "github": "https://github.com/naijopkr/gmap-api-example"
-      },
-      "description": "Sample of Google Maps API usage",
-      "language": "JavaScript",
-      "frameworks": ["React"],
-      "updated_at": "2019-03-29T20:54:17Z"
+    "description": "Replication of a problem from an interview with Google engineer.",
+    "language": "JavaScript",
+    "updated_at": "2019-03-29T22:57:45Z"
+  },
+  {
+    "id": 176578477,
+    "name": "gmap-api-example",
+    "published_on": {
+      "github": "https://github.com/naijopkr/gmap-api-example"
     },
-    {
-      "id": 177657250,
-      "name": "redux-training",
-      "published_on": {
-        "github": "https://github.com/naijopkr/redux-training"
-      },
-      "description": "JavaScript training: How Redux works.",
-      "language": "JavaScript",
-      "frameworks": ["React"],
-      "updated_at": "2019-03-25T21:26:27Z"
+    "description": "Sample of Google Maps API usage",
+    "language": "JavaScript",
+    "frameworks": ["React"],
+    "updated_at": "2019-03-29T20:54:17Z"
+  },
+  {
+    "id": 177657250,
+    "name": "redux-training",
+    "published_on": {
+      "github": "https://github.com/naijopkr/redux-training"
     },
-    {
-      "id": 168437002,
-      "name": "video-convert",
-      "published_on": {
-        "github": "https://github.com/naijopkr/video-convert"
-      },
-      "description": "Simple electron app to convert video formats",
-      "language": "JavaScript",
-      "frameworks": ["Electron", "React"],
-      "updated_at": "2019-02-19T00:29:47Z"
+    "description": "JavaScript training: How Redux works.",
+    "language": "JavaScript",
+    "frameworks": ["React"],
+    "updated_at": "2019-03-25T21:26:27Z"
+  },
+  {
+    "id": 168437002,
+    "name": "video-convert",
+    "published_on": {
+      "github": "https://github.com/naijopkr/video-convert"
     },
-    {
-      "id": 152669778,
-      "name": "edi-simulation",
-      "published_on": {
-        "github": "https://github.com/naijopkr/edi-simulation"
-      },
-      "description": "Simulation of Electronic Data Interchange in a supply chain using Node.js and JSON",
-      "language": "JavaScript",
-      "frameworks": ["Express"],
-      "updated_at": "2019-02-15T02:17:42Z"
+    "description": "Simple electron app to convert video formats",
+    "language": "JavaScript",
+    "frameworks": ["Electron", "React"],
+    "updated_at": "2019-02-19T00:29:47Z"
+  },
+  {
+    "id": 152669778,
+    "name": "edi-simulation",
+    "published_on": {
+      "github": "https://github.com/naijopkr/edi-simulation"
     },
-    {
-      "id": 149793144,
-      "name": "WeddingApp",
-      "published_on": {
-        "github": "https://github.com/naijopkr/WeddingApp"
-      },
-      "description": "Single page application built with React to manage a wedding page.",
-      "language": "JavaScript",
-      "frameworks": ["React", "Express"],
-      "database": ["MongoDB"],
-      "updated_at": "2019-02-13T23:49:27Z"
+    "description": "Simulation of Electronic Data Interchange in a supply chain using Node.js and JSON",
+    "language": "JavaScript",
+    "frameworks": ["Express"],
+    "updated_at": "2019-02-15T02:17:42Z"
+  },
+  {
+    "id": 149793144,
+    "name": "WeddingApp",
+    "published_on": {
+      "github": "https://github.com/naijopkr/WeddingApp"
     },
-    {
-      "id": 166900756,
-      "name": "tasky",
-      "published_on": {
-        "github": "https://github.com/naijopkr/tasky"
-      },
-      "description": "Simple task app for electron training",
-      "language": "JavaScript",
-      "frameworks": ["Electron", "React"],
-      "updated_at": "2019-01-30T01:37:43Z"
+    "description": "Single page application built with React to manage a wedding page.",
+    "language": "JavaScript",
+    "frameworks": ["React", "Express"],
+    "database": ["MongoDB"],
+    "updated_at": "2019-02-13T23:49:27Z"
+  },
+  {
+    "id": 166900756,
+    "name": "tasky",
+    "published_on": {
+      "github": "https://github.com/naijopkr/tasky"
     },
-    {
-      "id": 165755038,
-      "name": "todo-electron-sample",
-      "published_on": {
-        "github": "https://github.com/naijopkr/todo-electron-sample"
-      },
-      "description": "Just a sample to do list app written with electron",
-      "language": "JavaScript",
-      "frameworks": ["React", "Electron"],
-      "updated_at": "2019-01-18T00:11:15Z"
+    "description": "Simple task app for electron training",
+    "language": "JavaScript",
+    "frameworks": ["Electron", "React"],
+    "updated_at": "2019-01-30T01:37:43Z"
+  },
+  {
+    "id": 165755038,
+    "name": "todo-electron-sample",
+    "published_on": {
+      "github": "https://github.com/naijopkr/todo-electron-sample"
     },
-    {
-      "id": 150808335,
-      "name": "react-color-game",
-      "published_on": {
-        "github": "https://github.com/naijopkr/react-color-game"
-      },
-      "description": "Guess the color based on its RGB code.",
-      "language": "JavaScript",
-      "frameworks": ["React"],
-      "updated_at": "2019-01-08T23:46:45Z"
+    "description": "Just a sample to do list app written with electron",
+    "language": "JavaScript",
+    "frameworks": ["React", "Electron"],
+    "updated_at": "2019-01-18T00:11:15Z"
+  },
+  {
+    "id": 150808335,
+    "name": "react-color-game",
+    "published_on": {
+      "github": "https://github.com/naijopkr/react-color-game"
     },
-    {
-      "id": 164022911,
-      "name": "video-info",
-      "published_on": {
-        "github": "https://github.com/naijopkr/video-info"
-      },
-      "description": "Simple Electron app for retrieving duration of a video file.",
-      "language": "JavaScript",
-      "frameworks": ["Electron"],
-      "updated_at": "2019-01-03T21:07:15Z"
+    "description": "Guess the color based on its RGB code.",
+    "language": "JavaScript",
+    "frameworks": ["React"],
+    "updated_at": "2019-01-08T23:46:45Z"
+  },
+  {
+    "id": 164022911,
+    "name": "video-info",
+    "published_on": {
+      "github": "https://github.com/naijopkr/video-info"
     },
-    {
-      "id": 160212614,
-      "name": "AdvancedReactRedux",
-      "published_on": {
-        "github": "https://github.com/naijopkr/AdvancedReactRedux"
-      },
-      "description": "Advanced React and Redux course",
-      "language": "JavaScript",
-      "frameworks": ["React"],
-      "updated_at": "2018-12-12T00:31:25Z"
+    "description": "Simple Electron app for retrieving duration of a video file.",
+    "language": "JavaScript",
+    "frameworks": ["Electron"],
+    "updated_at": "2019-01-03T21:07:15Z"
+  },
+  {
+    "id": 160212614,
+    "name": "AdvancedReactRedux",
+    "published_on": {
+      "github": "https://github.com/naijopkr/AdvancedReactRedux"
     },
-    {
-      "id": 151314934,
-      "name": "react-buger-app",
-      "published_on": {
-        "github": "https://github.com/naijopkr/react-buger-app"
-      },
-      "description": "Burger Builder app",
-      "language": "JavaScript",
-      "frameworks": ["React"],
-      "updated_at": "2018-11-20T17:31:41Z"
+    "description": "Advanced React and Redux course",
+    "language": "JavaScript",
+    "frameworks": ["React"],
+    "updated_at": "2018-12-12T00:31:25Z"
+  },
+  {
+    "id": 151314934,
+    "name": "react-buger-app",
+    "published_on": {
+      "github": "https://github.com/naijopkr/react-buger-app"
     },
-    {
-      "id": 156742565,
-      "name": "mc-node-assignment",
-      "published_on": {
-        "github": "https://github.com/naijopkr/mc-node-assignment"
-      },
-      "description": "This is a short coding assignment to implement an API in Node.js that calls a \"backend API\" to get information about crash test ratings for vehicles.",
-      "language": "JavaScript",
-      "frameworks": ["Express"],
-      "updated_at": "2018-11-08T20:04:45Z"
+    "description": "Burger Builder app",
+    "language": "JavaScript",
+    "frameworks": ["React"],
+    "updated_at": "2018-11-20T17:31:41Z"
+  },
+  {
+    "id": 156742565,
+    "name": "mc-node-assignment",
+    "published_on": {
+      "github": "https://github.com/naijopkr/mc-node-assignment"
     },
-    {
-      "id": 153823830,
-      "name": "dotnet-todo",
-      "published_on": {
-        "github": "https://github.com/naijopkr/dotnet-todo"
-      },
-      "description": "Simple API using .NET Core",
-      "language": "C#",
-      "frameworks": [".NET Core"],
-      "updated_at": "2018-10-19T18:15:25Z"
+    "description": "This is a short coding assignment to implement an API in Node.js that calls a \"backend API\" to get information about crash test ratings for vehicles.",
+    "language": "JavaScript",
+    "frameworks": ["Express"],
+    "updated_at": "2018-11-08T20:04:45Z"
+  },
+  {
+    "id": 153823830,
+    "name": "dotnet-todo",
+    "published_on": {
+      "github": "https://github.com/naijopkr/dotnet-todo"
     },
-    {
-      "id": 150524838,
-      "name": "javascript-counter",
-      "published_on": {
-        "github": "https://github.com/naijopkr/javascript-counter"
-      },
-      "description": "Simple to implement javascript counter",
-      "language": "JavaScript",
-      "updated_at": "2018-10-09T03:10:39Z"
+    "description": "Simple API using .NET Core",
+    "language": "C#",
+    "frameworks": [".NET Core"],
+    "updated_at": "2018-10-19T18:15:25Z"
+  },
+  {
+    "id": 150524838,
+    "name": "javascript-counter",
+    "published_on": {
+      "github": "https://github.com/naijopkr/javascript-counter"
     },
-    {
-      "id": 100512310,
-      "name": "circlesProject",
-      "published_on": {
-        "github": "https://github.com/naijopkr/circlesProject"
-      },
-      "description": "Patatap clone as a exercise for WebDev Bootcamp",
-      "language": "JavaScript",
-      "updated_at": "2017-08-16T16:54:28Z"
+    "description": "Simple to implement javascript counter",
+    "language": "JavaScript",
+    "updated_at": "2018-10-09T03:10:39Z"
+  },
+  {
+    "id": 100512310,
+    "name": "circlesProject",
+    "published_on": {
+      "github": "https://github.com/naijopkr/circlesProject"
     },
-    {
-      "id": 99372204,
-      "name": "colorGame",
-      "published_on": {
-        "github": "https://github.com/naijopkr/colorGame"
-      },
-      "description": "Just a fun RGB game.",
-      "language": "JavaScript",
-      "updated_at": "2017-08-04T19:05:49Z"
-    }
-  ]
-}
+    "description": "Patatap clone as a exercise for WebDev Bootcamp",
+    "language": "JavaScript",
+    "updated_at": "2017-08-16T16:54:28Z"
+  },
+  {
+    "id": 99372204,
+    "name": "colorGame",
+    "published_on": {
+      "github": "https://github.com/naijopkr/colorGame"
+    },
+    "description": "Just a fun RGB game.",
+    "language": "JavaScript",
+    "updated_at": "2017-08-04T19:05:49Z"
+  }
+]

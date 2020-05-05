@@ -1,0 +1,30 @@
+[
+  {
+    "type_of": "article",
+    "id": 328357,
+    "title": "Seja mais produtivo com Linux #1",
+    "description": "pushd, popd e dirs   Esses três comandos servem para facilitar a sua navegação entre diretór...",
+    "published": true,
+    "published_at": "2020-05-05T19:01:57.918Z",
+    "slug": "seja-mais-produtivo-com-linux-1-2c18",
+    "path": "/arielbarcellos/seja-mais-produtivo-com-linux-1-2c18",
+    "url": "https://dev.to/arielbarcellos/seja-mais-produtivo-com-linux-1-2c18",
+    "comments_count": 0,
+    "positive_reactions_count": 0,
+    "page_views_count": 0,
+    "published_timestamp": "2020-05-05T19:01:57Z",
+    "body_markdown": "---\ntitle: Seja mais produtivo com Linux #1\npublished: true\ndescription: \ntags: linux, produtividade, terminal, bash\ncover_image: https://dev-to-uploads.s3.amazonaws.com/i/5odvac9yyq35pbmw6rwo.png\n---\n\n\n## `pushd`, `popd` e `dirs`\n\nEsses três comandos servem para facilitar a sua navegação entre diretórios. Normalmente, usamos o comando `cd [caminho_do_diretorio]`, porém com os comandos `pushd`, `popd` e `dirs` podem agilizar e muito a navegação entre diretórios, pois cria um registro dos diretórios em forma de uma pilha _(stack)_.\n\nBasicamente, os comandos funcionam da seguinte maneira: o comando `pushd` adiciona um diretório à pilha de diretórios. O comando `popd` remove o último diretório adicionado da pilha de diretórios, navegando até o diretório que estava posterior na pilha. Por último, o comando `dirs` mostra todos os diretórios na pilha.\n\n## Exemplo\n\n1. Navegue até o diretório `/tmp` e crie alguns diretórios para o exemplo:\n```\n$ cd /tmp\n\n$ mkdir diretorio{0,1,2,3,4} ~> esse comando criará 5 diretórios\n```\n\n2. Veja quais diretórios estão na pilha usando o comandodirs e depois navegue até o `diretorio0` com o comando `pushd diretorio0`:\n```\n$ dirs\noutput: /tmp\n```\n```\n$ pushd diretorio0\noutput: /tmp/diretorio0 /tmp\n```\n\n> Note que toda vez que você adiciona ou remove um diretório da pilha, será mostrado o novo estado da pilha na tela.\n\n3. Agora temos dois diretórios na pilha, se quisermos navegar até o `diretório1`, usamos novamente o comando `pushd` com o caminho (relativo ou absoluto):\n```\n$ pushd /tmp/diretorio1\noutput: /tmp/diretorio1 /tmp/diretorio0 /tmp\n```\n\n4. Para retornar ao `diretorio0` basta usarmos o comando `popd` e remover o diretorio1 da pilha:\n```\n$ popd\noutput: /tmp/diretorio0 /tmp\n```\n\n5. Para pular para um diretório específico da pilha sem remover nenhum, fazemos como abaixo:\n```\n$ pushd /tmp/diretorio0\noutput: /tmp/diretorio0 /tmp\n```\n```\n$ pushd /tmp/diretorio1\noutput: /tmp/diretorio1 /tmp/diretorio0 /tmp\n```\n```\n$ pushd /tmp/diretorio2\n/tmp/diretorio2 /tmp/diretorio1 /tmp/diretorio0 /tmp\n```\n\nSe queremos pular do diretório atual (`diretorio2`) para o `diretorio0` temos que andar duas posições na pilha. Então utilizamos o comando `pushd` conforme abaixo:\n```\n$ pushd +2\noutput: /tmp/diretorio0 /tmp /tmp/diretorio2 /tmp/diretorio1\n```\n\nCaso você use o comando `pushd` sem o argumento `+2`, você será direcionado para o último diretório antes desse, ou seja, você pode usar o comando `pushd` para revezar entre dois diretórios _(como se fosse um `alt + tab` entre diretórios)_.\n\n> Note que, ao caminhar pelas posições na pilha, os diretórios que antecediam o diretório de destino foram para o final da pilha. Isso pode fazer que a navegação se torne confuso se a pilha está muito grande. Porém, sempre se pode limpar a pilha utilizando o comando `dirs -c`.\n\nCom o tempo e costume isso ajuda muito na navegação, principalmente quando se tem que ficar indo de um lado pro outro em diretórios de configuração.",
+    "cover_image": "https://res.cloudinary.com/practicaldev/image/fetch/s--xgZ4S4cD--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/5odvac9yyq35pbmw6rwo.png",
+    "tag_list": ["linux", "produtividade", "terminal", "bash"],
+    "canonical_url": "https://dev.to/arielbarcellos/seja-mais-produtivo-com-linux-1-2c18",
+    "user": {
+      "name": "Ariel Barcellos",
+      "username": "arielbarcellos",
+      "twitter_username": "arielbarcellos",
+      "github_username": "naijopkr",
+      "website_url": "https://arielbarcellos.com",
+      "profile_image": "https://res.cloudinary.com/practicaldev/image/fetch/s--BBysmPcU--/c_fill,f_auto,fl_progressive,h_640,q_auto,w_640/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/100514/1f7d4826-88be-41ba-9131-90e679968c37.jpeg",
+      "profile_image_90": "https://res.cloudinary.com/practicaldev/image/fetch/s--jpMyEwtV--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/100514/1f7d4826-88be-41ba-9131-90e679968c37.jpeg"
+    }
+  }
+]
