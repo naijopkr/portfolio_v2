@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react'
 import ReactMD from 'react-markdown'
+import { useTranslation } from 'react-i18next'
 
 import { IArticle } from '../../../data/interfaces'
 
@@ -9,6 +10,7 @@ interface IArticleProps {
 
 const Article: React.FC<IArticleProps> = ({ article }) => {
   const [expand, setExpand] = useState<boolean>(false)
+  const { t } = useTranslation('articles')
 
   const toggleExpand = useCallback((nextState: boolean) => {
     setExpand(nextState)
@@ -36,7 +38,7 @@ const Article: React.FC<IArticleProps> = ({ article }) => {
           className="article-option button"
           onClick={() => toggleExpand(!expand)}
         >
-          {expand ? 'Close' : 'Read'}
+          {expand ? t('close') : t('read')}
         </button>
         <div className="article-option">
           <a
@@ -44,7 +46,7 @@ const Article: React.FC<IArticleProps> = ({ article }) => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            Read on DEV.to
+            {t('read_devto')}
           </a>
         </div>
       </div>

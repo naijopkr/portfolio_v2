@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { ArticlesWrapper } from './styles'
 import Article from './components/article'
@@ -7,6 +8,7 @@ import { IArticle } from '../../data/interfaces'
 
 const Articles: React.FC = () => {
   const [articles, setArticles] = useState<IArticle[]>([])
+  const { t } = useTranslation('articles')
 
   // FETCH ARTICLES
   useEffect(() => {
@@ -26,11 +28,8 @@ const Articles: React.FC = () => {
   return (
     <ArticlesWrapper>
       <div className="articles-warning">
-        <div className="articles-warning-title">Warning</div>
-        <div className="articles-warning-body">
-          {`The articles are available only in Portuguese at this time.\n
-          I will translate them to English and Spanish in the future.\n`}
-        </div>
+        <div className="articles-warning-title">{t('notice')}</div>
+        <div className="articles-warning-body">{t('notice_body')}</div>
       </div>
       <div className="articles-body">{renderArticles()}</div>
     </ArticlesWrapper>
