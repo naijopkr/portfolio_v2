@@ -1,0 +1,12 @@
+{
+  "menu_items": [
+    {
+      "name": "Proyectos",
+      "path": "/projects"
+    },
+    {
+      "name": "Articulos",
+      "path": "/articles"
+    }
+  ]
+}

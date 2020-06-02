@@ -1,10 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import { LogoWrapper } from './styles'
 
 const Logo: React.FC = () => (
   <LogoWrapper>
-    <div className="logo">AB</div>
+    <Link to="/" className="logo">
+      AB
+    </Link>
   </LogoWrapper>
 )
 

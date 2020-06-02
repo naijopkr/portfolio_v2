@@ -1,18 +1,39 @@
 import React, { useCallback, useState } from 'react'
 import { Settings as CogIcon } from '@material-ui/icons'
+import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 import { MenuWrapper, SettingsIcon } from './styles'
 import Logo from './components/logo'
 import Config from './components/config'
 import Backdrop from '../shared/backdrop'
 
+interface IMenuItem {
+  name: string
+  path: string
+}
+
 const Menu: React.FC = () => {
   const [showConfig, setShowConfig] = useState(false)
+  const { t } = useTranslation('menu')
+
   const toggleShowConfig = useCallback(() => {
     setShowConfig(!showConfig)
   }, [showConfig])
 
   const handleClose = useCallback(() => setShowConfig(false), [])
+
+  const renderMenuItems = useCallback(() => {
+    const menuItems: IMenuItem[] = t('menu_items', { returnObjects: true })
+
+    return menuItems.map(({ name, path }) => {
+      return (
+        <Link to={path} className="menu-item" key={name}>
+          {name}
+        </Link>
+      )
+    })
+  }, [t])
 
   return (
     <MenuWrapper>
@@ -20,6 +41,7 @@ const Menu: React.FC = () => {
         <Logo />
       </div>
       <div className="right">
+        {renderMenuItems()}
         <Backdrop show={showConfig} onCancel={toggleShowConfig} />
         <SettingsIcon>
           <CogIcon onClick={toggleShowConfig} />

@@ -8,6 +8,7 @@ export const LogoWrapper = styled.div`
 
   .logo {
     color: ${({ theme }) => theme.colors.title};
+    text-decoration: none;
     font-family: ${({ theme }) => theme.fonts.logo};
     font-size: 56px;
   }

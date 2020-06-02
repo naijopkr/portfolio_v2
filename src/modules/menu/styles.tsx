@@ -10,6 +10,21 @@ export const MenuWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.fill};
   box-shadow: 0px 4px 4px ${({ theme }) => theme.colors.shadow};
   padding: 0 32px;
+
+  .right {
+    display: flex;
+    align-items: center;
+
+    color: ${({ theme }) => theme.colors.title};
+    font-family: ${({ theme }) => theme.fonts.normal};
+
+    .menu-item {
+      text-decoration: none;
+      color: inherit;
+      line-height: 28px;
+      padding: 12px;
+    }
+  }
 `
 
 export const SettingsIcon = styled.div`
@@ -17,4 +32,5 @@ export const SettingsIcon = styled.div`
   z-index: 2;
   color: ${({ theme }) => theme.colors.title};
   cursor: pointer;
+  padding: 12px;
 `
