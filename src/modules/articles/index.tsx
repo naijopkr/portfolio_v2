@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react'
-import ReactMD from 'react-markdown'
 
 import { ArticlesWrapper } from './styles'
+import Article from './components/article'
 import { fetchArticles } from '../../data/requests'
 import { IArticle } from '../../data/interfaces'
 
@@ -19,21 +19,19 @@ const Articles: React.FC = () => {
 
   const renderArticles = useCallback(() => {
     return articles.map(article => {
-      return (
-        <div className="article" key={article.id}>
-          <div>{article.title}</div>
-          <div>{article.description}</div>
-          <div className="article-body-md">
-            <ReactMD source={article.body_markdown} />
-          </div>
-        </div>
-      )
+      return <Article key={article.id} article={article} />
     })
   }, [articles])
 
   return (
     <ArticlesWrapper>
-      <div className="articles-title">Articles</div>
+      <div className="articles-warning">
+        <div className="articles-warning-title">Warning</div>
+        <div className="articles-warning-body">
+          {`The articles are available only in Portuguese at this time.\n
+          I will translate them to English and Spanish in the future.\n`}
+        </div>
+      </div>
       <div className="articles-body">{renderArticles()}</div>
     </ArticlesWrapper>
   )
