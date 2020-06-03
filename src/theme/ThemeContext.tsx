@@ -36,7 +36,8 @@ type TThemeContext = [IThemeContext, THandleTheme]
 
 const fonts = {
   logo: 'Margarine',
-  normal: 'Cabin'
+  normal: 'Cabin',
+  monospace: 'Monospace'
 }
 
 const THEMES: IThemes = {

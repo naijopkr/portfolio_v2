@@ -11,6 +11,20 @@ export const MenuWrapper = styled.div`
   box-shadow: 0px 4px 4px ${({ theme }) => theme.colors.shadow};
   padding: 0 32px;
 
+  .left {
+    display: flex;
+
+    color: ${({ theme }) => theme.colors.title};
+    font-family: ${({ theme }) => theme.fonts.normal};
+
+    .menu-beta {
+      font-size: 12px;
+      align-self: flex-end;
+      margin-left: 8px;
+      margin-bottom: 12px;
+    }
+  }
+
   .right {
     display: flex;
     align-items: center;

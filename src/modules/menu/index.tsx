@@ -39,6 +39,7 @@ const Menu: React.FC = () => {
     <MenuWrapper>
       <div className="left">
         <Logo />
+        <div className="menu-beta">BETA</div>
       </div>
       <div className="right">
         {renderMenuItems()}

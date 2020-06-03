@@ -70,6 +70,14 @@ module.exports = {
       }
     ],
 
+    // @jsx-a11y
+    'jsx-a11y/label-has-associated-control': [
+      'error',
+      {
+        assert: 'htmlFor'
+      }
+    ],
+
     // general
     'arrow-parens': ['error', 'as-needed'],
 
