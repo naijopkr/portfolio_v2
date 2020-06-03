@@ -17,6 +17,9 @@ const colors = {
   purple_3: 'rgba(212, 213, 241, 0.8)',
   purple_4: 'rgba(212, 213, 241, 0.4)',
   purple_5: 'rgba(44, 46, 112, 0.25)',
+  red_1: '#b30000',
+  red_2: '#ff0000',
+  red_3: '#ff4800',
   white: '#ffffff'
 }
 

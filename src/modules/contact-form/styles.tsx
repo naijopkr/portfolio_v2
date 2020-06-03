@@ -12,8 +12,6 @@ export const FormWrapper = styled.div`
   }
 
   .form {
-    width: 80%;
-
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -45,6 +43,12 @@ export const FormWrapper = styled.div`
         color: ${({ theme }) => theme.colors.title};
 
         margin-bottom: 2px;
+      }
+
+      .form-error {
+        padding-left: 5px;
+        font-size: 12px;
+        color: ${({ theme }) => theme.colors.danger};
       }
 
       input {
@@ -97,7 +101,16 @@ export const FormWrapper = styled.div`
       width: 100%;
 
       display: flex;
-      justify-content: center;
+      flex-flow: column;
+      align-items: center;
+
+      font-family: ${({ theme }) => theme.fonts.normal};
+
+      .form-error {
+        font-size: 12px;
+        color: ${({ theme }) => theme.colors.danger};
+        margin-bottom: 5px;
+      }
 
       button {
         background-color: ${({ theme }) => theme.colors.fill};
@@ -105,11 +118,15 @@ export const FormWrapper = styled.div`
         padding: 8px 16px;
 
         color: ${({ theme }) => theme.colors.title};
-        font-family: ${({ theme }) => theme.fonts.normal};
         font-size: 18px;
         font-weight: bold;
 
         cursor: pointer;
+
+        :disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
       }
     }
   }

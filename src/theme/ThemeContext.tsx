@@ -18,6 +18,7 @@ interface ITheme {
     border: string
     select_border: string
     select_border_hover: string
+    danger: string
   }
 }
 
@@ -52,7 +53,8 @@ const THEMES: IThemes = {
       shadow_project: colors.purple_5,
       border: colors.gray_3,
       select_border: colors.blue_2,
-      select_border_hover: colors.blue_3
+      select_border_hover: colors.blue_3,
+      danger: colors.red_1
     }
   },
   dark: {
@@ -66,7 +68,8 @@ const THEMES: IThemes = {
       shadow_project: colors.purple_5,
       border: colors.gray_4,
       select_border: colors.purple_3,
-      select_border_hover: colors.purple_4
+      select_border_hover: colors.purple_4,
+      danger: colors.red_3
     }
   },
   highContrast: {
@@ -80,7 +83,8 @@ const THEMES: IThemes = {
       shadow_project: colors.purple_5,
       border: colors.gray_1,
       select_border: colors.green_4,
-      select_border_hover: colors.green_4
+      select_border_hover: colors.green_4,
+      danger: colors.red_2
     }
   }
 }
