@@ -1,0 +1,24 @@
+{
+  "title": "Si quieres contactarme, envíe un mensaje a través del siguiente formulario:",
+  "labels": {
+    "name": "Nombre",
+    "email": "E-mail",
+    "message": "Mensaje",
+    "submit": "Enviar"
+  },
+  "errors": {
+    "submit": "Error al enviar. Código {{code}} ({{status}})",
+    "name": {
+      "required": "Nombre es requerido",
+      "max": "Máximo de 256 caracteres"
+    },
+    "email": {
+      "required": "E-mail es requerido",
+      "invalid": "E-mail inválido"
+    },
+    "message": {
+      "required": "Mensaje es requerido",
+      "max": "Máximo de 10.000 caracteres"
+    }
+  }
+}

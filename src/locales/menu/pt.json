@@ -7,6 +7,10 @@
     {
       "name": "Artigos",
       "path": "/articles"
+    },
+    {
+      "name": "Contato",
+      "path": "/contact"
     }
   ]
 }

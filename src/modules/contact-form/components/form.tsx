@@ -1,5 +1,6 @@
 import React, { useMemo, useCallback } from 'react'
 import { useFormik, FormikHelpers } from 'formik'
+import { useTranslation } from 'react-i18next'
 import * as yup from 'yup'
 
 interface IContactForm {
@@ -14,41 +15,50 @@ type TSubmit = (
   helpers: FormikHelpers<IContactForm>
 ) => void
 
-const onSubmit: TSubmit = (values, helpers) => {
-  const options: RequestInit = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json;charset=UTF-8'
-    },
-    body: JSON.stringify({ ...values })
-  }
-
-  fetch('https://usebasin.com/f/95fd691eb902.json', options)
-    .then(res => {
-      if (!res.ok) {
-        throw new Error(
-          `Failed to submit. Code ${res.status}: ${res.statusText}`
-        )
-      }
-    })
-    .catch(err => helpers.setStatus({ error: err }))
-    .finally(() => helpers.setSubmitting(false))
-}
-
 export const Form: React.FC = () => {
+  const { t } = useTranslation('contactForm')
+
+  const onSubmit: TSubmit = useCallback(
+    (values, helpers) => {
+      const options: RequestInit = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json;charset=UTF-8'
+        },
+        body: JSON.stringify({ ...values })
+      }
+
+      fetch('https://usebasin.com/f/95fd691eb902.json', options)
+        .then(res => {
+          if (!res.ok) {
+            throw new Error(
+              t('errors.submit', { code: res.status, status: res.statusText })
+            )
+          }
+        })
+        .catch(err => helpers.setStatus({ error: err }))
+        .finally(() => helpers.setSubmitting(false))
+    },
+    [t]
+  )
+
   const schema = useMemo(() => {
     return yup.object().shape({
       name: yup
         .string()
-        .max(256, 'Max of 256 chars')
-        .required('Name is required'),
+        .max(256, t('errors.name.max'))
+        .required(t('errors.name.required')),
       email: yup
         .string()
-        .email('Invalid e-mail')
-        .required('E-mail is required'),
-      message: yup.string().required('Message is required')
+        .email(t('errors.email.invalid'))
+        .max(254, t('errors.email.invalid'))
+        .required(t('errors.email.required')),
+      message: yup
+        .string()
+        .required(t('errors.message.required'))
+        .max(10000, t('errors.message.max'))
     })
-  }, [])
+  }, [t])
 
   const formik = useFormik<IContactForm>({
     initialValues: {
@@ -86,7 +96,7 @@ export const Form: React.FC = () => {
     <form onSubmit={formik.handleSubmit}>
       <div className="form-row">
         <div className="form-field">
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">{t('labels.name')}</label>
           <input
             name="name"
             value={formik.values.name}
@@ -97,7 +107,7 @@ export const Form: React.FC = () => {
         </div>
 
         <div className="form-field">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">{t('labels.email')}</label>
           <input
             name="email"
             type="text"
@@ -110,7 +120,7 @@ export const Form: React.FC = () => {
       </div>
 
       <div className="form-field">
-        <label htmlFor="message">Message</label>
+        <label htmlFor="message">{t('labels.message')}</label>
         <textarea
           name="message"
           value={formik.values.message}
@@ -123,7 +133,7 @@ export const Form: React.FC = () => {
       <div className="form-submit">
         {renderStatus()}
         <button type="submit" disabled={formik.isSubmitting}>
-          Submit
+          {t('labels.submit')}
         </button>
       </div>
     </form>

@@ -1,0 +1,24 @@
+{
+  "title": "If you want to contact me, send a message through the following form:",
+  "labels": {
+    "name": "Name",
+    "email": "E-mail",
+    "message": "Message",
+    "submit": "Submit"
+  },
+  "errors": {
+    "submit": "Failed to submit. Code {{code}} ({{status}})",
+    "name": {
+      "required": "Name is required",
+      "max": "Maximum of 256 characters"
+    },
+    "email": {
+      "required": "E-mail is required",
+      "invalid": "Invalid e-mail"
+    },
+    "message": {
+      "required": "Message is required",
+      "max": "Maximum of 10,000 characters"
+    }
+  }
+}
