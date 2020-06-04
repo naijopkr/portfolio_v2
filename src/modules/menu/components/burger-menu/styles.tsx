@@ -26,11 +26,22 @@ export const BurgerWrapper = styled.div`
 
     &-item {
       width: 100%;
-      padding: 16px;
+      box-sizing: border-box;
 
       a {
+        padding: 16px;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+
+        display: block;
+
         color: ${({ theme }) => theme.colors.text};
         text-decoration: none;
+
+        :hover {
+          background: ${({ theme }) => theme.colors.shadow};
+        }
       }
     }
   }
