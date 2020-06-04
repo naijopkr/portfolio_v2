@@ -65,26 +65,24 @@ const ConfigDropdown: React.FC<IConfigDropdown> = ({ show, onSelect }) => {
   }
 
   return (
-    <>
-      <ConfigWrapper>
-        <div className="language" id="select">
-          <label htmlFor="language">{t('language')}</label>
-          <Select
-            name="language"
-            onChange={handleLanguage}
-            defaultValue={i18n.language.split('-')[0]}
-          >
-            {renderLanguages()}
-          </Select>
-        </div>
-        <div className="theme">
-          <label htmlFor="theme">{t('theme')}</label>
-          <Select name="theme" onChange={handleTheme} defaultValue={theme.name}>
-            {renderThemes()}
-          </Select>
-        </div>
-      </ConfigWrapper>
-    </>
+    <ConfigWrapper>
+      <div className="language" id="select">
+        <label htmlFor="language">{t('language')}</label>
+        <Select
+          name="language"
+          onChange={handleLanguage}
+          defaultValue={i18n.language.split('-')[0]}
+        >
+          {renderLanguages()}
+        </Select>
+      </div>
+      <div className="theme">
+        <label htmlFor="theme">{t('theme')}</label>
+        <Select name="theme" onChange={handleTheme} defaultValue={theme.name}>
+          {renderThemes()}
+        </Select>
+      </div>
+    </ConfigWrapper>
   )
 }
 

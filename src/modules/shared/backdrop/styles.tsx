@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const BackdropWrapper = styled.div`
-  position: absolute;
+  position: fixed;
   z-index: 1;
   top: 0;
   bottom: 0;

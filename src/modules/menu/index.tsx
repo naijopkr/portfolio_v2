@@ -4,14 +4,11 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 import { MenuWrapper, SettingsIcon } from './styles'
+import BurgerMenu from './components/burger-menu'
 import Logo from './components/logo'
 import Config from './components/config'
 import Backdrop from '../shared/backdrop'
-
-interface IMenuItem {
-  name: string
-  path: string
-}
+import { IMenuItem } from './interfaces'
 
 const Menu: React.FC = () => {
   const [showConfig, setShowConfig] = useState(false)
@@ -25,6 +22,10 @@ const Menu: React.FC = () => {
 
   const renderMenuItems = useCallback(() => {
     const menuItems: IMenuItem[] = t('menu_items', { returnObjects: true })
+
+    if (window.innerWidth < 480) {
+      return <BurgerMenu menuItems={menuItems} />
+    }
 
     return menuItems.map(({ name, path }) => {
       return (
