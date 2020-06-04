@@ -1,4 +1,5 @@
-import Twitter from './twitter'
+import Dev from './dev'
 import LinkedIn from './linkedin'
+import Twitter from './twitter'
 
-export { LinkedIn, Twitter }
+export { Dev, LinkedIn, Twitter }

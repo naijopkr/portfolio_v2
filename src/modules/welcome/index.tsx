@@ -22,7 +22,7 @@ const Welcome: React.FC = () => {
       listItems.map(item => {
         const { icon, label } = item
         return (
-          <li>
+          <li key={label}>
             <Icon>{icon}</Icon>
             {label}
           </li>
