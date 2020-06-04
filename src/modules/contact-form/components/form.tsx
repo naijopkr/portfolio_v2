@@ -17,7 +17,7 @@ type TSubmit = (
   helpers: FormikHelpers<IContactForm>
 ) => void
 
-export const Form: React.FC = () => {
+const Form: React.FC = () => {
   const { t } = useTranslation('contactForm')
   const [sent, setSent] = useState<boolean>(false)
 
@@ -149,3 +149,5 @@ export const Form: React.FC = () => {
     </form>
   )
 }
+
+export default Form

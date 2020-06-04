@@ -153,4 +153,19 @@ export const FormWrapper = styled.div`
       }
     }
   }
+
+  .social-media {
+    margin-top: 32px;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    .title {
+      text-align: center;
+
+      font-family: ${({ theme }) => theme.fonts.normal};
+      color: ${({ theme }) => theme.colors.text};
+    }
+  }
 `
