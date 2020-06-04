@@ -20,5 +20,8 @@
       "required": "Message is required",
       "max": "Maximum of 10,000 characters"
     }
-  }
+  },
+  "thanks": "Thanks for reaching me out, {{name}}.",
+  "reply": "I'll reply it as soon as possible.",
+  "back": "Back to home"
 }

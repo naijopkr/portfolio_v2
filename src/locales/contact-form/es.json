@@ -20,5 +20,8 @@
       "required": "Mensaje es requerido",
       "max": "Máximo de 10.000 caracteres"
     }
-  }
+  },
+  "thanks": "Gracias por contactarme, {{name}}.",
+  "reply": "Lo responderé lo antes posible.",
+  "back": "Página inicial"
 }

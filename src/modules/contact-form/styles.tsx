@@ -4,13 +4,6 @@ export const FormWrapper = styled.div`
   width: 100%;
   max-width: 1024px;
 
-  .form-title {
-    width: 100%;
-    text-align: center;
-
-    font-family: ${({ theme }) => theme.fonts.normal};
-  }
-
   .form {
     display: flex;
     flex-flow: column;
@@ -20,113 +13,143 @@ export const FormWrapper = styled.div`
 
     form {
       width: 100%;
-    }
 
-    .form-row {
-      display: flex;
-      justify-content: space-between;
+      .form-title {
+        width: 100%;
+        margin-bottom: 32px;
+        text-align: center;
+
+        font-family: ${({ theme }) => theme.fonts.normal};
+      }
+
+      .form-row {
+        display: flex;
+        justify-content: space-between;
+
+        .form-field {
+          width: 49%;
+        }
+      }
 
       .form-field {
-        width: 49%;
+        display: flex;
+        flex-flow: column;
+
+        margin-bottom: 16px;
+
+        font-family: ${({ theme }) => theme.fonts.normal};
+
+        label {
+          color: ${({ theme }) => theme.colors.title};
+
+          margin-bottom: 2px;
+        }
+
+        .form-error {
+          padding-left: 5px;
+          font-size: 12px;
+          color: ${({ theme }) => theme.colors.danger};
+        }
+
+        input {
+          height: 32px;
+          width: 100%;
+
+          font-family: ${({ theme }) => theme.fonts.monospace};
+          font-size: 18px;
+
+          text-indent: 3px;
+          outline-color: ${({ theme }) => theme.colors.title};
+        }
+
+        textarea {
+          height: 120px;
+          resize: vertical;
+
+          font-family: ${({ theme }) => theme.fonts.monospace};
+          font-size: 18px;
+
+          text-indent: 3px;
+          outline-color: ${({ theme }) => theme.colors.title};
+
+          ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+          }
+
+          ::-webkit-scrollbar-button:start:decrement,
+          ::-webkit-scrollbar-button:end:increment {
+            height: 6px;
+            display: block;
+            background-color: transparent;
+          }
+
+          ::-webkit-scrollbar-track-piece {
+            background-color: transparent;
+            border-radius: 6px;
+          }
+
+          ::-webkit-scrollbar-thumb {
+            height: 50px;
+            background-color: ${({ theme }) => theme.colors.fill};
+            border-radius: 6px;
+          }
+        }
       }
-    }
 
-    .form-field {
-      display: flex;
-      flex-flow: column;
-
-      margin-bottom: 16px;
-
-      font-family: ${({ theme }) => theme.fonts.normal};
-
-      label {
-        color: ${({ theme }) => theme.colors.title};
-
-        margin-bottom: 2px;
-      }
-
-      .form-error {
-        padding-left: 5px;
-        font-size: 12px;
-        color: ${({ theme }) => theme.colors.danger};
-      }
-
-      input {
-        height: 32px;
+      .form-submit {
         width: 100%;
 
-        font-family: ${({ theme }) => theme.fonts.monospace};
-        font-size: 18px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
 
-        text-indent: 3px;
-        outline-color: ${({ theme }) => theme.colors.title};
-      }
+        font-family: ${({ theme }) => theme.fonts.normal};
 
-      textarea {
-        height: 120px;
-        resize: vertical;
-
-        font-family: ${({ theme }) => theme.fonts.monospace};
-        font-size: 18px;
-
-        text-indent: 3px;
-        outline-color: ${({ theme }) => theme.colors.title};
-
-        ::-webkit-scrollbar {
-          width: 6px;
-          height: 6px;
+        .form-error {
+          font-size: 12px;
+          color: ${({ theme }) => theme.colors.danger};
+          margin-bottom: 5px;
         }
 
-        ::-webkit-scrollbar-button:start:decrement,
-        ::-webkit-scrollbar-button:end:increment {
-          height: 6px;
-          display: block;
-          background-color: transparent;
-        }
-
-        ::-webkit-scrollbar-track-piece {
-          background-color: transparent;
-          border-radius: 6px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-          height: 50px;
+        button {
           background-color: ${({ theme }) => theme.colors.fill};
-          border-radius: 6px;
+          border: none;
+          padding: 8px 16px;
+
+          color: ${({ theme }) => theme.colors.title};
+          font-size: 18px;
+          font-weight: bold;
+
+          cursor: pointer;
+
+          :disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+          }
         }
       }
     }
 
-    .form-submit {
-      width: 100%;
-
-      display: flex;
-      flex-flow: column;
-      align-items: center;
+    .form-thanks {
+      text-align: center;
 
       font-family: ${({ theme }) => theme.fonts.normal};
+      color: ${({ theme }) => theme.colors.text};
+      font-size: 24px;
 
-      .form-error {
-        font-size: 12px;
-        color: ${({ theme }) => theme.colors.danger};
-        margin-bottom: 5px;
+      div {
+        margin-bottom: 16px;
       }
 
-      button {
+      a {
         background-color: ${({ theme }) => theme.colors.fill};
-        border: none;
         padding: 8px 16px;
 
-        color: ${({ theme }) => theme.colors.title};
-        font-size: 18px;
+        font-size: 14px;
         font-weight: bold;
-
-        cursor: pointer;
-
-        :disabled {
-          opacity: 0.5;
-          cursor: not-allowed;
-        }
+        color: ${({ theme }) => theme.colors.title};
+        text-decoration: none;
       }
     }
   }

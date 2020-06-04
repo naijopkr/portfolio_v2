@@ -1,7 +1,9 @@
-import React, { useMemo, useCallback } from 'react'
+import React, { useMemo, useCallback, useState } from 'react'
 import { useFormik, FormikHelpers } from 'formik'
 import { useTranslation } from 'react-i18next'
 import * as yup from 'yup'
+
+import Thanks from './thanks'
 
 interface IContactForm {
   name: string
@@ -17,6 +19,7 @@ type TSubmit = (
 
 export const Form: React.FC = () => {
   const { t } = useTranslation('contactForm')
+  const [sent, setSent] = useState<boolean>(false)
 
   const onSubmit: TSubmit = useCallback(
     (values, helpers) => {
@@ -35,6 +38,8 @@ export const Form: React.FC = () => {
               t('errors.submit', { code: res.status, status: res.statusText })
             )
           }
+
+          setSent(true)
         })
         .catch(err => helpers.setStatus({ error: err }))
         .finally(() => helpers.setSubmitting(false))
@@ -92,8 +97,13 @@ export const Form: React.FC = () => {
     return null
   }, [formik])
 
+  if (sent) {
+    return <Thanks name={formik.values.name} />
+  }
+
   return (
     <form onSubmit={formik.handleSubmit}>
+      <div className="form-title">{t('title')}</div>
       <div className="form-row">
         <div className="form-field">
           <label htmlFor="name">{t('labels.name')}</label>
