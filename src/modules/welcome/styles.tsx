@@ -52,7 +52,7 @@ export const WelcomeWrapper = styled.div`
       background-color: ${({ theme }) => theme.colors.fill};
       color: ${({ theme }) => theme.colors.title};
       box-shadow: 2px 2px 2px ${({ theme }) => theme.colors.shadow};
-      padding 4px;
+      padding: 4px;
     }
   }
 

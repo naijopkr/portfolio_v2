@@ -19,7 +19,7 @@ interface ITheme {
     select_border: string
     select_border_hover: string
     danger: string
-    black: string
+    github_icon: string
   }
 }
 
@@ -56,7 +56,7 @@ const THEMES: IThemes = {
       select_border: colors.blue_2,
       select_border_hover: colors.blue_3,
       danger: colors.red_1,
-      black: colors.black_1
+      github_icon: colors.black_1
     }
   },
   dark: {
@@ -72,7 +72,7 @@ const THEMES: IThemes = {
       select_border: colors.purple_3,
       select_border_hover: colors.purple_4,
       danger: colors.red_3,
-      black: colors.black_1
+      github_icon: colors.white
     }
   },
   highContrast: {
@@ -88,7 +88,7 @@ const THEMES: IThemes = {
       select_border: colors.green_4,
       select_border_hover: colors.green_4,
       danger: colors.red_2,
-      black: colors.black_1
+      github_icon: colors.white
     }
   }
 }

@@ -13,7 +13,7 @@ export const SocialMediaWrapper = styled.div`
     padding: 8px;
 
     a {
-      color: ${({ theme }) => theme.colors.black};
+      color: ${({ theme }) => theme.colors.github_icon};
     }
 
     svg {
