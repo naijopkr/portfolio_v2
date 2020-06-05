@@ -31,8 +31,11 @@ export const Circle = styled.div`
   height: 100px;
   margin: 8px 2px;
   border-radius: 50%;
+  border: 1px solid ${({ theme }) => theme.colors.border};
 
   cursor: pointer;
 
   background-color: ${({ color }) => color};
+
+  transition: opacity 0.5s ease-in-out;
 `
