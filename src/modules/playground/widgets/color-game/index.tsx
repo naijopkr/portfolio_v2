@@ -80,7 +80,7 @@ const ColorGame: React.FC = () => {
 
   const renderStatus = useCallback(() => {
     if (!gameStatus) {
-      return null
+      return <div className="game-status" />
     }
 
     return (

@@ -3,6 +3,8 @@ import styled from 'styled-components'
 export const ColorGameWrapper = styled.div`
   width: 100%;
   height: 100%;
+  padding: 16px;
+  box-sizing: border-box;
 
   display: flex;
   flex-flow: column;
@@ -18,6 +20,7 @@ export const ColorGameWrapper = styled.div`
 
   .circles {
     width: 100%;
+    flex-grow: 1;
     margin-top: 32px;
 
     display: flex;
@@ -30,6 +33,7 @@ export const ColorGameWrapper = styled.div`
     flex-flow: column;
     align-items: center;
     justify-content: center;
+    min-height: 70px;
 
     margin-top: 16px;
 
@@ -50,8 +54,7 @@ export const ColorGameWrapper = styled.div`
 `
 
 export const Circle = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 30%;
   margin: 8px 2px;
   border-radius: 50%;
   border: 1px solid ${({ theme }) => theme.colors.border};
