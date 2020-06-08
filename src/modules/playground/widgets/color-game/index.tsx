@@ -2,7 +2,11 @@ import React, { useEffect, useState, useCallback, MouseEvent } from 'react'
 
 import { ColorGameWrapper, Circle } from './styles'
 
-const initGame = () => {
+type TCheckAnswer = (evt: MouseEvent<HTMLDivElement>) => void
+type TGetAnswer = (options: string[]) => string
+type TInitGame = () => string[]
+
+const initGame: TInitGame = () => {
   const circleColors = new Set<string>()
   while (circleColors.size < 6) {
     const colorComposition = [
@@ -17,11 +21,10 @@ const initGame = () => {
   return Array.from(circleColors)
 }
 
-const getAnswer = (options: string[]) => {
+const getAnswer: TGetAnswer = (options: string[]) => {
   const index = Math.ceil(Math.random() * (options.length - 1))
   return options[index]
 }
-
 
 const ColorGame: React.FC = () => {
   const [gameStatus, setStatus] = useState<string>()
@@ -33,7 +36,7 @@ const ColorGame: React.FC = () => {
   const [circles, setCircles] = useState<JSX.Element[]>()
 
   const initCircles = useCallback(() => {
-    const checkAnswer = (evt: MouseEvent<HTMLDivElement>) => {
+    const checkAnswer: TCheckAnswer = (evt: MouseEvent<HTMLDivElement>) => {
       if (!playing) {
         return
       }
@@ -44,8 +47,10 @@ const ColorGame: React.FC = () => {
       if (match) {
         const circleEls = document.querySelectorAll<HTMLDivElement>('.circle')
         circleEls.forEach(el => {
-          el.style.backgroundColor = answer
-          el.style.opacity = '1'
+          Object.assign(el.style, {
+            backgroundColor: answer,
+            opacity: '1'
+          })
         })
 
         setPlaying(false)
@@ -54,10 +59,9 @@ const ColorGame: React.FC = () => {
         circle.style.opacity = '0'
         setStatus('Wrong. Try again.')
       }
-
     }
 
-    return colors.map((color) => (
+    return colors.map(color => (
       <Circle
         className="circle"
         style={{ backgroundColor: color }}
@@ -66,7 +70,6 @@ const ColorGame: React.FC = () => {
       />
     ))
   }, [answer, colors, playing])
-
 
   const restartGame = useCallback(() => {
     setPlaying(true)
@@ -83,7 +86,11 @@ const ColorGame: React.FC = () => {
     return (
       <div className="game-status">
         <div className="status-text">{gameStatus}</div>
-        {playing ? null : <button onClick={restartGame} className="new-game">New Game</button>}
+        {playing ? null : (
+          <button type="button" onClick={restartGame} className="new-game">
+            New Game
+          </button>
+        )}
       </div>
     )
   }, [gameStatus, playing, restartGame])

@@ -35,7 +35,5 @@ export const Circle = styled.div`
 
   cursor: pointer;
 
-  background-color: ${({ color }) => color};
-
   transition: opacity 0.5s ease-in-out;
 `
