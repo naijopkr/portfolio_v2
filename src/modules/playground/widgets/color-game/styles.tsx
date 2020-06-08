@@ -24,6 +24,29 @@ export const ColorGameWrapper = styled.div`
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  .game-status {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 16px;
+
+    .new-game {
+      margin-top: 16px;
+
+      border: none;
+      outline: none;
+
+      background-color: ${({ theme }) => theme.colors.fill};
+      color: ${({ theme }) => theme.colors.title};
+      font-family: ${({ theme }) => theme.fonts.normal};
+      padding: 8px 16px;
+
+      cursor: pointer;
+    }
+  }
 `
 
 export const Circle = styled.div`
