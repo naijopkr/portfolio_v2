@@ -1,0 +1,15 @@
+{
+  "caesar_cipher": {
+    "title": "Cifra de César",
+    "desc": "A cifra de césar é um método simples de cifra de substituição na qual um caractere é deslocado 3 posições abaixo do alfabeto",
+    "text_input": "Entrada de texto:",
+    "encoded_output": "Text codificado:"
+  },
+  "color_game": {
+    "title": "Jogo das Cores",
+    "desc": "Adivinhe a cor correta para o seguinte código rgb:",
+    "new_game": "Novo Jogo",
+    "wrong": "Incorreto. Tente novamente.",
+    "right": "Bom trabalho!"
+  }
+}

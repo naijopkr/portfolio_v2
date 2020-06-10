@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback, MouseEvent } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { ColorGameWrapper, Circle } from './styles'
 
@@ -27,6 +28,8 @@ const getAnswer: TGetAnswer = (options: string[]) => {
 }
 
 const ColorGame: React.FC = () => {
+  const { t } = useTranslation('color_game')
+
   const [gameStatus, setStatus] = useState<string>()
   const [playing, setPlaying] = useState<boolean>(true)
   const [readyToPlay, setReady] = useState<boolean>(false)
@@ -35,8 +38,8 @@ const ColorGame: React.FC = () => {
   const [answer, setAnswer] = useState<string>('')
   const [circles, setCircles] = useState<JSX.Element[]>()
 
-  const initCircles = useCallback(() => {
-    const checkAnswer: TCheckAnswer = (evt: MouseEvent<HTMLDivElement>) => {
+  const checkAnswer: TCheckAnswer = useCallback(
+    (evt: MouseEvent<HTMLDivElement>) => {
       if (!playing) {
         return
       }
@@ -54,13 +57,16 @@ const ColorGame: React.FC = () => {
         })
 
         setPlaying(false)
-        setStatus('Good job!!')
+        setStatus('right')
       } else {
         circle.style.opacity = '0'
-        setStatus('Wrong. Try again.')
+        setStatus(t('wrong'))
       }
-    }
+    },
+    [t, answer, playing]
+  )
 
+  const initCircles = useCallback(() => {
     return colors.map(color => (
       <Circle
         className="circle"
@@ -69,7 +75,7 @@ const ColorGame: React.FC = () => {
         onClick={checkAnswer}
       />
     ))
-  }, [answer, colors, playing])
+  }, [colors, checkAnswer])
 
   const restartGame = useCallback(() => {
     setPlaying(true)
@@ -85,15 +91,17 @@ const ColorGame: React.FC = () => {
 
     return (
       <div className="game-status">
-        <div className="status-text">{gameStatus}</div>
+        <div className="status-text">
+          {gameStatus === 'right' ? t('right') : t('wrong')}
+        </div>
         {playing ? null : (
           <button type="button" onClick={restartGame} className="new-game">
-            New Game
+            {t('new_game')}
           </button>
         )}
       </div>
     )
-  }, [gameStatus, playing, restartGame])
+  }, [gameStatus, playing, restartGame, t])
 
   useEffect(() => {
     if (answer && readyToPlay) {
@@ -108,10 +116,8 @@ const ColorGame: React.FC = () => {
 
   return (
     <ColorGameWrapper>
-      <div className="title">Color Game</div>
-      <div className="desc">
-        Guess the correct color for the following rgb code:
-      </div>
+      <div className="title">{t('title')}</div>
+      <div className="desc">{t('desc')}</div>
       <div className="rgb">{answer}</div>
       <div className="circles">{circles}</div>
       {renderStatus()}

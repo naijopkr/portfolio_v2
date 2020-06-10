@@ -1,4 +1,5 @@
 import React, { useCallback, useState, ChangeEvent } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { CCWrapper } from './styles'
 
@@ -8,9 +9,6 @@ interface ICharTypes {
 }
 type TGetCharType = (code: number) => [number, number] | undefined
 type TEncrypt = (original: string) => string
-
-const DESC =
-  'The caesar cipher is a simple method of substitution cipher in which a character is shifted 3 positions down the alphabet'
 
 const CHAR_CODES: ICharTypes = {
   lower: [97, 123],
@@ -49,6 +47,8 @@ const encrypt: TEncrypt = (originalText: string) => {
 }
 
 const CaesarCipher: React.FC = () => {
+  const { t } = useTranslation('caesar_cipher')
+
   const [original, setOriginal] = useState('')
   const [encrypted, setEncrypted] = useState('')
 
@@ -59,11 +59,11 @@ const CaesarCipher: React.FC = () => {
 
   return (
     <CCWrapper>
-      <div className="title">Caesar Cipher</div>
-      <div className="description">{DESC}</div>
+      <div className="title">{t('title')}</div>
+      <div className="description">{t('desc')}</div>
       <div className="cipher">
         <div className="cipher-input">
-          <label htmlFor="text-input">Text input:</label>
+          <label htmlFor="text-input">{t('text_input')}</label>
           <textarea
             name="text-input"
             value={original}
@@ -71,7 +71,7 @@ const CaesarCipher: React.FC = () => {
             rows={7}
           />
         </div>
-        <div className="output-label">Encoded output:</div>
+        <div className="output-label">{t('encoded_output')}</div>
         <div className="cipher-output">{encrypted}</div>
       </div>
     </CCWrapper>

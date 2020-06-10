@@ -1,0 +1,15 @@
+{
+  "caesar_cipher": {
+    "title": "Cifrado de César",
+    "desc": "El cifrado César es un método simple de cifrado de sustitución en el que un carácter se desplaza 3 posiciones hacia abajo en el alfabeto",
+    "text_input": "Entrada de texto:",
+    "encoded_output": "Texto codificado:"
+  },
+  "color_game": {
+    "title": "Juego de Colores",
+    "desc": "Adivina el color correcto para el siguiente código rgb:",
+    "new_game": "Nuevo Juego",
+    "wrong": "Incorrecto! Inténtalo de nuevo.",
+    "right": "Buen trabajo!"
+  }
+}

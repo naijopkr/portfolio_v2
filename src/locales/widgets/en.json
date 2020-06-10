@@ -1,0 +1,15 @@
+{
+  "caesar_cipher": {
+    "title": "Caesar Cipher",
+    "desc": "The caesar cipher is a simple method of substitution cipher in which a character is shifted 3 positions down the alphabet",
+    "text_input": "Text input:",
+    "encoded_output": "Encoded output:"
+  },
+  "color_game": {
+    "title": "Color Game",
+    "desc": "Guess the correct color for the following rgb code:",
+    "new_game": "New Game",
+    "wrong": "Wrong. Try again.",
+    "right": "Good job!"
+  }
+}
