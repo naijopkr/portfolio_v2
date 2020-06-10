@@ -89,6 +89,8 @@ module.exports = {
 
     semi: ['error', 'never'],
 
+    'no-plusplus': 'off',
+
     // import
     'import/order': [
       'error',
