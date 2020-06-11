@@ -11,5 +11,10 @@
     "new_game": "New Game",
     "wrong": "Wrong. Try again.",
     "right": "Good job!"
+  },
+  "prime_number": {
+    "title": "Prime Numbers",
+    "desc": "Using a generator function, get the next prime number every time you click the \"Next Prime\" button",
+    "next-prime": "Next Prime"
   }
 }

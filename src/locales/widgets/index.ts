@@ -12,5 +12,10 @@ export default {
     en: en.color_game,
     es: es.color_game,
     pt: pt.color_game
+  },
+  prime_number: {
+    en: en.prime_number,
+    es: es.prime_number,
+    pt: pt.prime_number
   }
 }

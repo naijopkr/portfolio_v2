@@ -11,5 +11,10 @@
     "new_game": "Novo Jogo",
     "wrong": "Incorreto. Tente novamente.",
     "right": "Bom trabalho!"
+  },
+  "prime_number": {
+    "title": "Números Primos",
+    "desc": "Usando uma função \"generator\", obtenha o próximo número primo cada vez que clique no botão \"Próximo Primo\"",
+    "next-prime": "Próximo Primo"
   }
 }
