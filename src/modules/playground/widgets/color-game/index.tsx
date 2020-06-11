@@ -2,30 +2,9 @@ import React, { useEffect, useState, useCallback, MouseEvent } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { ColorGameWrapper, Circle } from './styles'
+import { initGame, getAnswer } from '../../lib/color-game'
 
 type TCheckAnswer = (evt: MouseEvent<HTMLDivElement>) => void
-type TGetAnswer = (options: string[]) => string
-type TInitGame = () => string[]
-
-const initGame: TInitGame = () => {
-  const circleColors = new Set<string>()
-  while (circleColors.size < 6) {
-    const colorComposition = [
-      Math.ceil(Math.random() * 255),
-      Math.ceil(Math.random() * 255),
-      Math.ceil(Math.random() * 255)
-    ].join(', ')
-
-    circleColors.add(`rgb(${colorComposition})`)
-  }
-
-  return Array.from(circleColors)
-}
-
-const getAnswer: TGetAnswer = (options: string[]) => {
-  const index = Math.ceil(Math.random() * (options.length - 1))
-  return options[index]
-}
 
 const ColorGame: React.FC = () => {
   const { t } = useTranslation('color_game')
