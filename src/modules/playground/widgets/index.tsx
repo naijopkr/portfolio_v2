@@ -1,6 +1,7 @@
 import ColorGame from './color-game'
 import CaesarCipher from './caesar-cipher'
 import PrimeNumber from './prime-number'
+import LCM from './lcm'
 
 export default [
   {
@@ -14,5 +15,9 @@ export default [
   {
     Widget: PrimeNumber,
     key: 'PrimeNumber'
+  },
+  {
+    Widget: LCM,
+    key: 'LCM'
   }
 ]
