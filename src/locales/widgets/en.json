@@ -16,5 +16,12 @@
     "title": "Prime Numbers",
     "desc": "Using a generator function, get the next prime number every time you click the \"Next Prime\" button",
     "next-prime": "Next Prime"
+  },
+  "lcm": {
+    "title": "Lowest Common Multiple",
+    "desc": "Calculte the lowest common multiple between two numbers.",
+    "num1": "Input 1",
+    "num2": "Input 2",
+    "calculate": "Calculate"
   }
 }

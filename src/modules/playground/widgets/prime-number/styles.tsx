@@ -18,6 +18,10 @@ export const PrimeWrapper = styled.div`
     margin-bottom: 8px;
   }
 
+  .description {
+    margin-top: 16px;
+  }
+
   .prime-number {
     display: flex;
     flex-flow: column;

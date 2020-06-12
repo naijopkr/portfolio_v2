@@ -16,5 +16,12 @@
     "title": "Números Primos",
     "desc": "Usando uma função \"generator\", obtenha o próximo número primo cada vez que clique no botão \"Próximo Primo\"",
     "next-prime": "Próximo Primo"
+  },
+  "lcm": {
+    "title": "Mínimo múltiplo comum",
+    "desc": "Calcular o mínimo múltiplo comum entre dois números.",
+    "num1": "Entrada 1",
+    "num2": "Entrada 2",
+    "calculate": "Calcular"
   }
 }

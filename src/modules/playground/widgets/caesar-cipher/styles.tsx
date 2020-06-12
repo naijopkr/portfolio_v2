@@ -18,6 +18,10 @@ export const CCWrapper = styled.div`
     margin-bottom: 8px;
   }
 
+  .description {
+    margin-top: 16px;
+  }
+
   .cipher {
     flex-grow: 1;
 

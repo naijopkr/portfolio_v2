@@ -18,6 +18,10 @@ export const ColorGameWrapper = styled.div`
     margin-bottom: 8px;
   }
 
+  .desc {
+    margin-top: 16px;
+  }
+
   .circles {
     width: 100%;
     flex-grow: 1;

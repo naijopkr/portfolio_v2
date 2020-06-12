@@ -4,8 +4,9 @@ import { useTranslation } from 'react-i18next'
 import { LCMWrapper } from './styles'
 import { getLCM } from '../../lib/prime-numbers'
 
-type TSetState = React.Dispatch<React.SetStateAction<number | undefined>>
+type TSetState = React.Dispatch<React.SetStateAction<string>>
 const ONLY_NUMBERS = /^\d*$/
+const MAX_LENGTH = 6
 
 const handleNumChange = (setState: TSetState) => (
   e: ChangeEvent<HTMLInputElement>
@@ -15,27 +16,24 @@ const handleNumChange = (setState: TSetState) => (
   if (!ONLY_NUMBERS.test(value)) {
     return
   }
-  const newValue = value ? Number(value) : undefined
-  setState(newValue)
+
+  setState(value)
 }
 
 const LCM: React.FC = () => {
   const { t } = useTranslation('lcm')
 
-  const [num1, setNum1] = useState<number>()
-  const [num2, setNum2] = useState<number>()
-  const [output, setOutput] = useState<number>()
+  const [num1, setNum1] = useState<string>('')
+  const [num2, setNum2] = useState<string>('')
+  const [output, setOutput] = useState<string>('')
 
-  const calculateLCM = useCallback(
-    (n1: number | undefined, n2: number | undefined) => {
-      if (!n1 || !n2) {
-        return
-      }
+  const calculateLCM = useCallback((n1: string, n2: string) => {
+    if (!n1 || !n2) {
+      return
+    }
 
-      setOutput(getLCM(n1, n2))
-    },
-    []
-  )
+    setOutput(getLCM(Number(n1), Number(n2)).toString())
+  }, [])
 
   const handleNum1 = useCallback(handleNumChange(setNum1), [])
   const handleNum2 = useCallback(handleNumChange(setNum2), [])
@@ -52,7 +50,8 @@ const LCM: React.FC = () => {
               name="num1"
               type="text"
               onChange={handleNum1}
-              value={num1 || ''}
+              value={num1}
+              maxLength={MAX_LENGTH}
             />
           </div>
           <div className="inputs-num">
@@ -61,7 +60,8 @@ const LCM: React.FC = () => {
               name="num2"
               type="text"
               onChange={handleNum2}
-              value={num2 || ''}
+              value={num2}
+              maxLength={MAX_LENGTH}
             />
           </div>
           <div className="calculate">
@@ -76,7 +76,6 @@ const LCM: React.FC = () => {
           </div>
         </div>
         <div className="output">
-          <div className="output-desc">{t('output-desc')}</div>
           <div className="output-value">{output}</div>
         </div>
       </div>

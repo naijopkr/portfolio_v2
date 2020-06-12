@@ -17,5 +17,10 @@ export default {
     en: en.prime_number,
     es: es.prime_number,
     pt: pt.prime_number
+  },
+  lcm: {
+    en: en.lcm,
+    es: es.lcm,
+    pt: pt.lcm
   }
 }

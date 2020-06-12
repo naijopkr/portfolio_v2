@@ -18,6 +18,10 @@ export const LCMWrapper = styled.div`
     margin-bottom: 8px;
   }
 
+  .desc {
+    margin: 16px 0 32px 0;
+  }
+
   .lcm {
     display: flex;
     flex-flow: column;
@@ -32,9 +36,9 @@ export const LCMWrapper = styled.div`
         display: flex;
         flex-flow: column;
 
-        width: 120px;
         box-sizing: border-box;
         padding: 8px 16px;
+        width: 50%;
 
         label {
           margin-bottom: 5px;
