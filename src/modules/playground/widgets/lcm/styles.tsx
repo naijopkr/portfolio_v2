@@ -17,4 +17,75 @@ export const LCMWrapper = styled.div`
     text-transform: uppercase;
     margin-bottom: 8px;
   }
+
+  .lcm {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+
+    .inputs {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+
+      .inputs-num {
+        display: flex;
+        flex-flow: column;
+
+        width: 120px;
+        box-sizing: border-box;
+        padding: 8px 16px;
+
+        label {
+          margin-bottom: 5px;
+        }
+
+        input {
+          height: 32px;
+          text-indent: 5px;
+          font-size: 18px;
+        }
+      }
+
+      .calculate {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 8px;
+
+        button {
+          border: none;
+          outline: none;
+
+          background-color: ${({ theme }) => theme.colors.fill};
+          color: ${({ theme }) => theme.colors.title};
+          padding: 8px 16px;
+
+          cursor: pointer;
+        }
+      }
+    }
+
+    .output {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      flex-grow: 1;
+
+      &-desc {
+        margin-top: 16px;
+      }
+
+      &-value {
+        flex-grow: 1;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+
+        font-family: ${({ theme }) => theme.fonts.monospace};
+        font-size: 58px;
+        color: ${({ theme }) => theme.colors.title};
+      }
+    }
+  }
 `

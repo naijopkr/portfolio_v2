@@ -7,6 +7,18 @@ import { getLCM } from '../../lib/prime-numbers'
 type TSetState = React.Dispatch<React.SetStateAction<number | undefined>>
 const ONLY_NUMBERS = /^\d*$/
 
+const handleNumChange = (setState: TSetState) => (
+  e: ChangeEvent<HTMLInputElement>
+) => {
+  const { value } = e.target
+
+  if (!ONLY_NUMBERS.test(value)) {
+    return
+  }
+  const newValue = value ? Number(value) : undefined
+  setState(newValue)
+}
+
 const LCM: React.FC = () => {
   const { t } = useTranslation('lcm')
 
@@ -25,18 +37,8 @@ const LCM: React.FC = () => {
     []
   )
 
-  const handleNumChange = useCallback(
-    (setState: TSetState) => (e: ChangeEvent<HTMLInputElement>) => {
-      const { value } = e.target
-
-      if (!ONLY_NUMBERS.test(value)) {
-        return
-      }
-      const newValue = value ? Number(value) : undefined
-      setState(newValue)
-    },
-    []
-  )
+  const handleNum1 = useCallback(handleNumChange(setNum1), [])
+  const handleNum2 = useCallback(handleNumChange(setNum2), [])
 
   return (
     <LCMWrapper>
@@ -49,8 +51,8 @@ const LCM: React.FC = () => {
             <input
               name="num1"
               type="text"
-              onChange={handleNumChange(setNum1)}
-              value={num1}
+              onChange={handleNum1}
+              value={num1 || ''}
             />
           </div>
           <div className="inputs-num">
@@ -58,8 +60,8 @@ const LCM: React.FC = () => {
             <input
               name="num2"
               type="text"
-              onChange={handleNumChange(setNum2)}
-              value={num2}
+              onChange={handleNum2}
+              value={num2 || ''}
             />
           </div>
           <div className="calculate">
