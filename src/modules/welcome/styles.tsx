@@ -18,26 +18,38 @@ export const WelcomeWrapper = styled.div`
   box-sizing: border-box;
 
   .title {
-    max-width: 535px;
     font-family: ${({ theme }) => theme.fonts.normal};
     font-size: 56px;
     line-height: 68px;
     margin-bottom: 40px;
   }
 
+  .subtitle {
+    margin-top: 48px;
+    margin-bottom: 24px;
+
+    font-size: 40px;
+  }
+
   .body-list {
     font-family: ${({ theme }) => theme.fonts.normal};
     font-size: 24px;
-    line-height: 2;
     list-style-type: none;
     padding: 0;
     margin: 0 0 0 16px;
+    line-height: 1.5;
 
     li {
       display: flex;
-      height: 32px;
       align-items: center;
-      margin-bottom: 16px;
+      margin-bottom: 32px;
+
+      a,
+      .section {
+        color: ${({ theme }) => theme.colors.title};
+        font-family: ${({ theme }) => theme.fonts.monospace};
+        text-decoration: none;
+      }
     }
 
     .material-icons {
@@ -48,7 +60,7 @@ export const WelcomeWrapper = styled.div`
       align-items: center;
       border-radius: 50%;
       font-size: 16px;
-      margin-right: 8px;
+      margin-right: 12px;
       background-color: ${({ theme }) => theme.colors.fill};
       color: ${({ theme }) => theme.colors.title};
       box-shadow: 2px 2px 2px ${({ theme }) => theme.colors.shadow};
@@ -56,11 +68,12 @@ export const WelcomeWrapper = styled.div`
     }
   }
 
-  .presentation {
+  .presentation,
+  .about {
     margin: 0 0 16px 0;
     font-family: ${({ theme }) => theme.fonts.normal};
     font-size: 24px;
-    line-height: 2;
+    line-height: 1.5;
   }
 
   .welcome-button {

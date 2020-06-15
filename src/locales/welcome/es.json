@@ -1,19 +1,58 @@
 {
-  "title": "¿Buscando un desarrollador de software?",
-  "presentation": "Soy {{name}}, y puedo ofrecerle:",
+  "title": "Hello, {{name}} here!!! Welcome and let me tell you what is going on here.",
+  "presentation": "As you can see, this is a Beta version. That’s because there’s still a lot of features that I intend to implement here. For now, you can check the following sections:",
   "welcome_items": [
     {
-      "label": "Experiencia tanto en front como backend",
+      "section": "Projects",
+      "label": "My GitHub repositories. If you are learning about programming, data science and/or statistical learning / machine learning, there’s a lot of content there to give you ideas.",
       "icon": "code"
     },
     {
-      "label": "Centrarse en la calidad, la eficiencia y la escalabilidad del código",
+      "section": "Articles",
+      "label": "Blog posts I've written related to cyber security, open source, productivity, and development. (Only in Portuguese for now)",
       "icon": "linear_scale"
     },
     {
-      "label": "Resolver problemas con las tecnologías y paradigmas más recientes",
+      "section": "Playground",
+      "label": "Some fun widgets I've implemented to give you ideas and to have fun.",
+      "icon": "account_tree"
+    },
+    {
+      "section": "Contact",
+      "label": "If you want to reach me out to work together, or with questions / suggestions feel free to fill the contact form. You can also fint me in social media platforms:",
       "icon": "account_tree"
     }
   ],
-  "go_to_projects": "Ir para proyectos"
+  "coming_soon": {
+    "title": "Coming soon",
+    "desc": "And what features I intend to have here in the future? Here some of them:",
+    "soon_items": [
+      {
+        "section": "API",
+        "label": "Implement the web api to automate fetching my GitHub repos and to create some other cool widgets that needs a backend server to work better.",
+        "icon": "account_tree"
+      },
+      {
+        "section": "Videos",
+        "label": "Create a Videos section with tutorials / programming courses.",
+        "icon": "account_tree"
+      },
+      {
+        "section": "Translated articles",
+        "label": "I will translate my articles to English and Spanish, but first I'm thinking about hosting my own blog instead of posting it on Dev, that way I have more flexibility.",
+        "icon": "account_tree"
+      },
+      {
+        "section": "Logo",
+        "label": "And I want to create a cool logo!",
+        "icon": "account_tree"
+      },
+      {
+        "section": "After that",
+        "label": "I have a lot of ideas, but we'll see when we get there.",
+        "icon": "account_tree"
+      }
+    ]
+  },
+  "about": "By the way, this project is public on GitHub. Fork it!!! "
 }
