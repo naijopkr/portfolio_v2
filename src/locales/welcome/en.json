@@ -1,5 +1,5 @@
 {
-  "title": "Hello, {{name}} here!!! Welcome and let me tell you what is going on here.",
+  "title": "Hello, {{name}} here!!! Welcome and let me tell you what is going on.",
   "presentation": "As you can see, this is a Beta version. That’s because there’s still a lot of features that I intend to implement here. For now, you can check the following sections:",
   "welcome_items": [
     {
@@ -12,19 +12,19 @@
       "section": "Articles",
       "label": "Blog posts I've written related to cyber security, open source, productivity, and development. (Only in Portuguese for now)",
       "path": "/articles",
-      "icon": "linear_scale"
+      "icon": "chrome_reader_mode"
     },
     {
       "section": "Playground",
       "label": "Some fun widgets I've implemented to give you ideas and to have fun.",
       "path": "/playground",
-      "icon": "account_tree"
+      "icon": "videogame_asset"
     },
     {
       "section": "Contact",
-      "label": "If you want to reach me out to work together, or with questions / suggestions feel free to fill the contact form. You can also fint me in social media platforms:",
+      "label": "If you want to reach me out to work together or with questions / suggestions, feel free to fill the contact form. You can also find me in social media platforms:",
       "path": "/contact",
-      "icon": "account_tree"
+      "icon": "mail"
     }
   ],
   "coming_soon": {
@@ -33,30 +33,30 @@
     "soon_items": [
       {
         "section": "API",
-        "label": "Implement the web api to automate fetching my GitHub repos and to create some other cool widgets that needs a backend server to work better.",
-        "icon": "account_tree"
+        "label": "Implement the web api to automate fetching my GitHub repos and to allow the implementation of other widgets that need a back-end server to work better.",
+        "icon": "https"
       },
       {
         "section": "Videos",
         "label": "Create a Videos section with tutorials / programming courses.",
-        "icon": "account_tree"
+        "icon": "video_library"
       },
       {
         "section": "Translated articles",
         "label": "I will translate my articles to English and Spanish, but first I'm thinking about hosting my own blog instead of posting it on Dev, that way I have more flexibility.",
-        "icon": "account_tree"
+        "icon": "language"
       },
       {
         "section": "Logo",
-        "label": "And I want to create a cool logo!",
-        "icon": "account_tree"
+        "label": "I want to create a cool logo! Ideas?",
+        "icon": "brush"
       },
       {
         "section": "After that",
         "label": "I have a lot of ideas, but we'll see when we get there.",
-        "icon": "account_tree"
+        "icon": "more_horiz"
       }
     ]
   },
-  "about": "By the way, this project is public on GitHub. Fork it!!! "
+  "about": "By the way, this project is public on GitHub. Fork it!!!"
 }

@@ -1,58 +1,62 @@
 {
-  "title": "Hello, {{name}} here!!! Welcome and let me tell you what is going on here.",
-  "presentation": "As you can see, this is a Beta version. That’s because there’s still a lot of features that I intend to implement here. For now, you can check the following sections:",
+  "title": "Olá, {{name}} aqui!!! Bem-vindo e deixa eu te contar sobre isso aqui.",
+  "presentation": "Como você pode ver, esta é uma versão Beta. Isso porque, ainda tem muitas funcionalidades que eu pretendo implmentar. Por ora, você pode conferir as seguintes seções:",
   "welcome_items": [
     {
-      "section": "Projects",
-      "label": "My GitHub repositories. If you are learning about programming, data science and/or statistical learning / machine learning, there’s a lot of content there to give you ideas.",
+      "section": "Projetos",
+      "label": "Meus repositórios do GitHub. Se você está aprendendo programação, data science e/ou statistical learning / machine learning, tem um monte de conteúdo para te inspirar.",
+      "path": "/projects",
       "icon": "code"
     },
     {
-      "section": "Articles",
-      "label": "Blog posts I've written related to cyber security, open source, productivity, and development. (Only in Portuguese for now)",
-      "icon": "linear_scale"
+      "section": "Artigos",
+      "label": "Post que escrevi sobre cybersecurity, código aberto (open source), produtividade e desenvolvimento. (Apenas em portugês por enquanto)",
+      "path": "/articles",
+      "icon": "chrome_reader_mode"
     },
     {
       "section": "Playground",
-      "label": "Some fun widgets I've implemented to give you ideas and to have fun.",
-      "icon": "account_tree"
+      "label": "Alguns widgets legais que eu implementei para te dar ideias e se divertir.",
+      "path": "/playground",
+      "icon": "videogame_asset"
     },
     {
-      "section": "Contact",
-      "label": "If you want to reach me out to work together, or with questions / suggestions feel free to fill the contact form. You can also fint me in social media platforms:",
-      "icon": "account_tree"
+      "section": "Contato",
+      "label": "Se você gostaria de entrar em contato para trabalhar junto, ou com perguntas / sugestões, sinta-se a vontade para preencher o formulário de contato. Você também pode me achar através das plataformas de mídia social:",
+      "path": "/contact",
+      "icon": "mail"
     }
   ],
   "coming_soon": {
-    "title": "Coming soon",
-    "desc": "And what features I intend to have here in the future? Here some of them:",
+    "title": "Em breve",
+    "desc": "E que funcionalidades eu pretendo ter aqui no futuro? Aqui são algumas:",
     "soon_items": [
       {
         "section": "API",
-        "label": "Implement the web api to automate fetching my GitHub repos and to create some other cool widgets that needs a backend server to work better.",
-        "icon": "account_tree"
+        "label": "Implementar um api web para automatizar a busca de repositórios do GitHub e permitir a implementação de outros widgets que precisam de um servidor de back-end para funcionar melhor.",
+        "icon": "https"
       },
       {
         "section": "Videos",
-        "label": "Create a Videos section with tutorials / programming courses.",
-        "icon": "account_tree"
+        "label": "Criar uma seção de Videos com tutoriais / cursos de programação.",
+        "icon": "video_library"
       },
       {
-        "section": "Translated articles",
-        "label": "I will translate my articles to English and Spanish, but first I'm thinking about hosting my own blog instead of posting it on Dev, that way I have more flexibility.",
-        "icon": "account_tree"
+        "section": "Artigos traduzidos",
+        "label": "Eu irei traduzir meus artigos para inglês e espanhol, mas primeiro eu estou pensando em hospedar meu próprio blog ao invés de postar em Dev, dessa forma eu tenho mais flexibilidade.",
+        "icon": "language"
       },
       {
         "section": "Logo",
-        "label": "And I want to create a cool logo!",
-        "icon": "account_tree"
+        "label": "Eu quero criar um logo bacana! Ideias?",
+        "icon": "brush"
       },
       {
-        "section": "After that",
-        "label": "I have a lot of ideas, but we'll see when we get there.",
-        "icon": "account_tree"
+        "section": "Depois disso",
+        "label": "Eu tenho muitas ideias, mas veremos quando chegarmos lá.",
+        "icon": "more_horiz"
       }
     ]
   },
-  "about": "By the way, this project is public on GitHub. Fork it!!! "
+  "about": "A propósito, Este porjeto é público no GitHub. Faça um fork!!!"
 }
