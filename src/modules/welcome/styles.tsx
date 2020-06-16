@@ -9,6 +9,7 @@ export const WelcomeWrapper = styled.div`
   width: 80%;
   max-width: 1110px;
   padding: 32px 72px;
+  margin-bottom: 32px;
 
   background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.text};
@@ -24,11 +25,40 @@ export const WelcomeWrapper = styled.div`
     margin-bottom: 40px;
   }
 
+  .presentation {
+    margin: 0 0 16px 0;
+    font-family: ${({ theme }) => theme.fonts.normal};
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
   .subtitle {
     margin-top: 48px;
     margin-bottom: 24px;
 
     font-size: 40px;
+  }
+
+  .social-media {
+    align-self: center;
+  }
+
+  .about {
+    align-self: center;
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin-top: 32px;
+
+    font-family: ${({ theme }) => theme.fonts.normal};
+    font-size: 24px;
+    line-height: 1.5;
+
+    background: ${({ theme }) => theme.colors.fill};
+
+    a {
+      color: ${({ theme }) => theme.colors.title};
+      text-decoration: none;
+    }
   }
 
   .body-list {
@@ -66,23 +96,5 @@ export const WelcomeWrapper = styled.div`
       box-shadow: 2px 2px 2px ${({ theme }) => theme.colors.shadow};
       padding: 4px;
     }
-  }
-
-  .presentation,
-  .about {
-    margin: 0 0 16px 0;
-    font-family: ${({ theme }) => theme.fonts.normal};
-    font-size: 24px;
-    line-height: 1.5;
-  }
-
-  .welcome-button {
-    background-color: ${({ theme }) => theme.colors.fill};
-    color: ${({ theme }) => theme.colors.title};
-    font-family: ${({ theme }) => theme.fonts.normal};
-    padding: 16px;
-    text-decoration: none;
-    margin-top: 40px;
-    box-shadow: 2px 2px 2px ${({ theme }) => theme.colors.shadow};
   }
 `

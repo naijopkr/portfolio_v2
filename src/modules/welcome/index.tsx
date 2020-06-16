@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 import { WelcomeWrapper } from './styles'
+import SocialMedias from '../shared/social-media'
 
 interface IListItem {
   icon: string
@@ -58,10 +59,21 @@ const Welcome: React.FC = () => {
         {t('presentation', { name: 'Ariel Barcellos' })}
       </div>
       <ul className="body-list">{renderList(welcomeItems)}</ul>
+      <div className="social-media">
+        <SocialMedias />
+      </div>
       <div className="subtitle">{t('coming_soon.title')}</div>
       <div className="presentation">{t('coming_soon.desc')}</div>
       <ul className="body-list">{renderList(soonList)}</ul>
-      <div className="about">{t('about')}</div>
+      <div className="about">
+        <a
+          href="https://github.com/naijopkr/portfolio_v2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {t('about')}
+        </a>
+      </div>
     </WelcomeWrapper>
   )
 }
