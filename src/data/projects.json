@@ -1,5 +1,170 @@
 [
   {
+    "id": 246101152,
+    "name": "portfolio_v2",
+    "published_on": {
+      "github": "https://github.com/naijopkr/portfolio_v2"
+    },
+    "description": "Portfolio project made with React",
+    "language": "TypeScript",
+    "topics": ["Front End"],
+    "updated_at": "2020-06-16T15:08:26Z"
+  },
+  {
+    "id": 271401532,
+    "name": "ISLR_Labs",
+    "published_on": {
+      "github": "https://github.com/naijopkr/ISLR_Labs"
+    },
+    "description": "Labs from the book An Introduction to Statistical Learning",
+    "language": "R",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-06-15T22:04:06Z"
+  },
+  {
+    "id": 272533179,
+    "name": "titanic",
+    "published_on": {
+      "github": "https://github.com/naijopkr/titanic"
+    },
+    "description": "Kaggle Machine Learning challenge: https://www.kaggle.com/c/titanic",
+    "language": "Python",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-06-15T20:09:49Z"
+  },
+  {
+    "id": 269481048,
+    "name": "ecommerce-sl",
+    "published_on": {
+      "github": "https://github.com/naijopkr/ecommerce-sl"
+    },
+    "description": "Statistical Learning exercise",
+    "language": "Python",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-06-08T20:40:54Z"
+  },
+  {
+    "id": 268919163,
+    "name": "boston-housing",
+    "published_on": {
+      "github": "https://github.com/naijopkr/boston-housing"
+    },
+    "description": "Machine learning exercise with real data",
+    "language": "Python",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-06-08T20:06:51Z"
+  },
+  {
+    "id": 268916226,
+    "name": "house-prices",
+    "published_on": {
+      "github": "https://github.com/naijopkr/house-prices"
+    },
+    "description": "Machine learning introduction",
+    "language": "Python",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-06-02T21:52:42Z"
+  },
+  {
+    "id": 265691086,
+    "name": "stock-prices",
+    "published_on": {
+      "github": "https://github.com/naijopkr/stock-prices"
+    },
+    "description": "Stock prices project for Data Science course",
+    "language": "Python",
+    "topics": ["Data Science"],
+    "updated_at": "2020-05-26T20:35:00Z"
+  },
+  {
+    "id": 260015177,
+    "name": "merge-sort",
+    "published_on": {
+      "github": "https://github.com/naijopkr/merge-sort"
+    },
+    "description": "Python implementation of the Merge Sort algorithm",
+    "language": "Python",
+    "topics": ["Classic Algorithms"],
+    "updated_at": "2020-05-26T15:38:07Z"
+  },
+  {
+    "id": 263748599,
+    "name": "911_calls",
+    "published_on": {
+      "github": "https://github.com/naijopkr/911_calls"
+    },
+    "description": "Playing with data about 911 calls using Python Data Science tools",
+    "language": "Python",
+    "topics": ["Data Science"],
+    "updated_at": "2020-05-19T21:53:52Z"
+  },
+  {
+    "id": 263471353,
+    "name": "data-science-exercise",
+    "published_on": {
+      "github": "https://github.com/naijopkr/data-science-exercise"
+    },
+    "description": "Data Science (pandas and plotly) training",
+    "language": "Python",
+    "topics": ["Data Science"],
+    "updated_at": "2020-05-13T15:37:52Z"
+  },
+  {
+    "id": 262384580,
+    "name": "dev-challenges",
+    "published_on": {
+      "github": "https://github.com/naijopkr/dev-challenges"
+    },
+    "description": "Daily challenges from Dev.to",
+    "language": "Python",
+    "topics": ["Challenges"],
+    "updated_at": "2020-05-08T20:01:04Z"
+  },
+  {
+    "id": 261551874,
+    "name": "delete_nth",
+    "published_on": {
+      "github": "https://github.com/naijopkr/delete_nth"
+    },
+    "description": "Daily Challenge #237 - Delete Extra Occurrences",
+    "language": "Python",
+    "topics": ["Challenges"],
+    "updated_at": "2020-05-05T18:28:23Z"
+  },
+  {
+    "id": 260265576,
+    "name": "bubble-sort",
+    "published_on": {
+      "github": "https://github.com/naijopkr/bubble-sort"
+    },
+    "description": "Python implementation of the Bubble Sort algorithm",
+    "language": "Python",
+    "topics": ["Classic Algorithms"],
+    "updated_at": "2020-04-30T16:56:47Z"
+  },
+  {
+    "id": 254746857,
+    "name": "collatz-conjecture",
+    "published_on": {
+      "github": "https://github.com/naijopkr/collatz-conjecture"
+    },
+    "description": "Implementation of the classic algorithm Collatz Conjecture in Python.",
+    "language": "Python",
+    "topics": ["Classic Algorithms"],
+    "updated_at": "2020-04-14T21:00:29Z"
+  },
+  {
+    "id": 255713520,
+    "name": "kdeplot-example",
+    "published_on": {
+      "github": "https://github.com/naijopkr/kdeplot-example"
+    },
+    "description": "Example of how a kdeplot works in Python",
+    "language": "Python",
+    "topics": ["Data Science"],
+    "updated_at": "2020-04-14T20:59:46Z"
+  },
+  {
     "id": 252846285,
     "name": "credit-card-generator",
     "published_on": {
@@ -7,6 +172,7 @@
     },
     "description": "Python module to validate and generate credit card numbers",
     "language": "Python",
+    "topics": ["Challenges"],
     "updated_at": "2020-04-09T19:54:18Z"
   },
   {
@@ -17,6 +183,7 @@
     },
     "description": "Python module to generate secure passwords",
     "language": "Python",
+    "topics": ["Challenges"],
     "updated_at": "2020-03-27T20:46:58Z"
   },
   {
@@ -27,6 +194,7 @@
     },
     "description": "A small demonstration of the caesar cipher using python.",
     "language": "Python",
+    "topics": ["Classic Algorithms", "Challenges"],
     "updated_at": "2020-03-27T14:47:27Z"
   },
   {
@@ -37,6 +205,7 @@
     },
     "description": "Python module to find the lowest commom multiple between two numbers",
     "language": "Python",
+    "topics": ["Mathematics", "Challenges", "Classic Algorithms"],
     "updated_at": "2020-03-27T14:20:24Z"
   },
   {
@@ -47,6 +216,7 @@
     },
     "description": "A module that receives an integer and returns the prime factors of this number.",
     "language": "Python",
+    "topics": ["Mathematics", "Challenges", "Classic Algorithms"],
     "updated_at": "2020-03-26T21:43:34Z"
   },
   {
@@ -57,6 +227,7 @@
     },
     "description": "Shell script to create and activate python virtual environment with .gitignore and __main__.py files.",
     "language": "Shell",
+    "topics": ["Utils"],
     "updated_at": "2020-03-26T20:37:23Z"
   },
   {
@@ -67,6 +238,7 @@
     },
     "description": "Simple implementation of function to get prime number in python.",
     "language": "Python",
+    "topics": ["Mathematics", "Classic Algorithms", "Challenges"],
     "updated_at": "2020-03-25T15:13:39Z"
   },
   {
@@ -77,6 +249,7 @@
     },
     "description": "Simple script to fetch public data from GitHub",
     "language": "JavaScript",
+    "topics": ["Utils"],
     "updated_at": "2020-03-24T19:58:57Z"
   },
   {
@@ -87,6 +260,7 @@
     },
     "description": "Simple game of Blackjack made wity Python",
     "language": "Python",
+    "topics": ["Games"],
     "updated_at": "2020-03-12T15:19:32Z"
   },
   {
@@ -97,6 +271,7 @@
     },
     "description": "Super Tic Tac Toe python project to play enjoy modular arithmetic. (Better interface coming soon!)",
     "language": "Python",
+    "topics": ["Games"],
     "updated_at": "2020-03-03T16:30:10Z"
   },
   {
@@ -109,6 +284,7 @@
     "language": "JavaScript",
     "frameworks": ["React", "Express"],
     "database": ["MongoDB"],
+    "topics": ["Front End"],
     "updated_at": "2019-05-29T19:06:49Z"
   },
   {
@@ -119,6 +295,7 @@
     },
     "description": "A function that get a string as argument and returns the first recurring character",
     "language": "JavaScript",
+    "topics": ["Challenges"],
     "updated_at": "2019-04-05T15:58:34Z"
   },
   {
@@ -129,6 +306,7 @@
     },
     "description": "Replication of a problem from an interview with Google engineer.",
     "language": "JavaScript",
+    "topics": ["Challenges"],
     "updated_at": "2019-03-29T22:57:45Z"
   },
   {
@@ -140,6 +318,7 @@
     "description": "Sample of Google Maps API usage",
     "language": "JavaScript",
     "frameworks": ["React"],
+    "topics": ["Front End"],
     "updated_at": "2019-03-29T20:54:17Z"
   },
   {
@@ -151,6 +330,7 @@
     "description": "JavaScript training: How Redux works.",
     "language": "JavaScript",
     "frameworks": ["React"],
+    "topics": ["Front End"],
     "updated_at": "2019-03-25T21:26:27Z"
   },
   {
@@ -162,6 +342,7 @@
     "description": "Simple electron app to convert video formats",
     "language": "JavaScript",
     "frameworks": ["Electron", "React"],
+    "topics": ["Front End", "Utils"],
     "updated_at": "2019-02-19T00:29:47Z"
   },
   {
@@ -173,6 +354,7 @@
     "description": "Simulation of Electronic Data Interchange in a supply chain using Node.js and JSON",
     "language": "JavaScript",
     "frameworks": ["Express"],
+    "topics": ["Challenges"],
     "updated_at": "2019-02-15T02:17:42Z"
   },
   {
@@ -185,6 +367,7 @@
     "language": "JavaScript",
     "frameworks": ["React", "Express"],
     "database": ["MongoDB"],
+    "topics": ["Front End"],
     "updated_at": "2019-02-13T23:49:27Z"
   },
   {
@@ -196,6 +379,7 @@
     "description": "Simple task app for electron training",
     "language": "JavaScript",
     "frameworks": ["Electron", "React"],
+    "topics": ["Front End"],
     "updated_at": "2019-01-30T01:37:43Z"
   },
   {
@@ -207,6 +391,7 @@
     "description": "Just a sample to do list app written with electron",
     "language": "JavaScript",
     "frameworks": ["React", "Electron"],
+    "topics": ["Front End"],
     "updated_at": "2019-01-18T00:11:15Z"
   },
   {
@@ -218,6 +403,7 @@
     "description": "Guess the color based on its RGB code.",
     "language": "JavaScript",
     "frameworks": ["React"],
+    "topics": ["Front End", "Games"],
     "updated_at": "2019-01-08T23:46:45Z"
   },
   {
@@ -229,6 +415,7 @@
     "description": "Simple Electron app for retrieving duration of a video file.",
     "language": "JavaScript",
     "frameworks": ["Electron"],
+    "topics": ["Utils"],
     "updated_at": "2019-01-03T21:07:15Z"
   },
   {
@@ -240,6 +427,7 @@
     "description": "Advanced React and Redux course",
     "language": "JavaScript",
     "frameworks": ["React"],
+    "topics": ["Front End"],
     "updated_at": "2018-12-12T00:31:25Z"
   },
   {
@@ -251,6 +439,7 @@
     "description": "Burger Builder app",
     "language": "JavaScript",
     "frameworks": ["React"],
+    "topics": ["Front End"],
     "updated_at": "2018-11-20T17:31:41Z"
   },
   {
@@ -262,6 +451,7 @@
     "description": "This is a short coding assignment to implement an API in Node.js that calls a \"backend API\" to get information about crash test ratings for vehicles.",
     "language": "JavaScript",
     "frameworks": ["Express"],
+    "topics": ["API"],
     "updated_at": "2018-11-08T20:04:45Z"
   },
   {
@@ -273,6 +463,7 @@
     "description": "Simple API using .NET Core",
     "language": "C#",
     "frameworks": [".NET Core"],
+    "topics": ["API"],
     "updated_at": "2018-10-19T18:15:25Z"
   },
   {
@@ -283,6 +474,7 @@
     },
     "description": "Simple to implement javascript counter",
     "language": "JavaScript",
+    "topics": ["Front End"],
     "updated_at": "2018-10-09T03:10:39Z"
   },
   {
@@ -293,6 +485,7 @@
     },
     "description": "Patatap clone as a exercise for WebDev Bootcamp",
     "language": "JavaScript",
+    "topics": ["Front End", "Games"],
     "updated_at": "2017-08-16T16:54:28Z"
   },
   {
@@ -303,6 +496,7 @@
     },
     "description": "Just a fun RGB game.",
     "language": "JavaScript",
+    "topics": ["Front End", "Games"],
     "updated_at": "2017-08-04T19:05:49Z"
   }
 ]
