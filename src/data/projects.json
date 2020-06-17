@@ -1,5 +1,16 @@
 [
   {
+    "id": 272806478,
+    "name": "advertising",
+    "published_on": {
+      "github": "https://github.com/naijopkr/advertising"
+    },
+    "description": "Logistic regression example with advertising data",
+    "language": "Python",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-06-16T20:34:30Z"
+  },
+  {
     "id": 246101152,
     "name": "portfolio_v2",
     "published_on": {
