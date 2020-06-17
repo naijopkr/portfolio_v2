@@ -23,17 +23,20 @@ const Menu: React.FC = () => {
   const renderMenuItems = useCallback(() => {
     const menuItems: IMenuItem[] = t('menu_items', { returnObjects: true })
 
-    if (window.innerWidth < 480) {
-      return <BurgerMenu menuItems={menuItems} />
-    }
-
-    return menuItems.map(({ name, path }) => {
+    const menuComp = menuItems.map(({ name, path }) => {
       return (
         <Link to={path} className="menu-item" key={name}>
           {name}
         </Link>
       )
     })
+
+    return (
+      <>
+        <BurgerMenu menuItems={menuItems} />
+        {menuComp}
+      </>
+    )
   }, [t])
 
   return (

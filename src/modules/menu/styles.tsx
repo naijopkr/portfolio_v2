@@ -37,6 +37,10 @@ export const MenuWrapper = styled.div`
       color: inherit;
       line-height: 28px;
       padding: 12px;
+
+      @media (max-width: 600px) {
+        display: none;
+      }
     }
   }
 `

@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
 export const BurgerWrapper = styled.div`
+  @media (min-width: 600px) {
+    display: none;
+  }
+
   height: 100%;
   position: relative;
 
