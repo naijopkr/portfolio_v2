@@ -21,7 +21,12 @@ const Project: React.FC<IProjectFC> = ({
   selectedFilters
 }) => {
   const renderTags = useCallback(() => {
-    const { language = '', frameworks = [], database = [] } = project
+    const {
+      language = '',
+      frameworks = [],
+      database = [],
+      topics = []
+    } = project
 
     const languageTag = [
       <Tag
@@ -50,7 +55,16 @@ const Project: React.FC<IProjectFC> = ({
       />
     ))
 
-    return [...languageTag, ...frameworksTags, ...databaseTags]
+    const topicTags = topics.map(tp => (
+      <Tag
+        label={tp}
+        key={`topic-${tp}`}
+        onClick={() => selectFilters('topics', tp)}
+        active={selectedFilters.topics.has(tp)}
+      />
+    ))
+
+    return [...languageTag, ...frameworksTags, ...databaseTags, ...topicTags]
   }, [project, selectFilters, selectedFilters])
 
   const renderLinks = useCallback(() => {

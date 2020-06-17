@@ -8,6 +8,7 @@ export interface IFilters {
   languages: Set<string>
   frameworks: Set<string>
   database: Set<string>
+  topics: Set<string>
 }
 
 interface IFiltersProps {
@@ -24,11 +25,7 @@ const Filters: React.FC<IFiltersProps> = ({
   const { t } = useTranslation('filters')
 
   const renderTags = useCallback(() => {
-    // if (selectedFilters.languages.size) {
-    //   console.log(selectedFilters)
-    // }
-
-    const { languages, frameworks, database } = filters
+    const { languages, frameworks, database, topics } = filters
 
     const langFilters = Array.from(languages).map(language => (
       <Tag
@@ -57,6 +54,15 @@ const Filters: React.FC<IFiltersProps> = ({
       />
     ))
 
+    const topicFilters = Array.from(topics).map(tp => (
+      <Tag
+        onClick={() => selectFilters('topics', tp)}
+        active={selectedFilters.topics.has(tp)}
+        label={tp}
+        key={tp}
+      />
+    ))
+
     return (
       <>
         <div className="filters-title">{t('filters')}</div>
@@ -66,6 +72,8 @@ const Filters: React.FC<IFiltersProps> = ({
         <div className="filters-tags">{frameworksFilters}</div>
         <div className="filters-labels">{t('databases')}</div>
         <div className="filters-tags">{databaseFilters}</div>
+        <div className="filters-labels">{t('topics')}</div>
+        <div className="filters-tags">{topicFilters}</div>
       </>
     )
   }, [filters, t, selectFilters, selectedFilters])

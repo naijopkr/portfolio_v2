@@ -8,7 +8,7 @@ export interface IProject {
   language: string
   frameworks?: string[]
   database?: string[]
-  topicts?: string[]
+  topics?: string[]
   updated_at: string
 }
 

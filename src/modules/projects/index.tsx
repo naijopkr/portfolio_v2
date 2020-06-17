@@ -13,12 +13,14 @@ const Projects: React.FC = () => {
   const [selectedFilters, selectFilters] = useState<IFilters>({
     languages: new Set(),
     frameworks: new Set(),
-    database: new Set()
+    database: new Set(),
+    topics: new Set()
   })
   const [filters, setFilters] = useState<IFilters>({
     languages: new Set(),
     frameworks: new Set(),
-    database: new Set()
+    database: new Set(),
+    topics: new Set()
   })
   const [projects, setProjects] = useState<IProject[]>([])
 
@@ -33,38 +35,26 @@ const Projects: React.FC = () => {
 
   // FETCH FILTERS
   useEffect(() => {
-    const langArray = projects.reduce((pv: string[], cv) => {
-      const { language } = cv
+    const langSet = new Set<string>()
+    const fwSet = new Set<string>()
+    const dbSet = new Set<string>()
+    const topicSet = new Set<string>()
 
-      return [...pv, language]
-    }, [])
+    projects.forEach(proj => {
+      const { language, frameworks = [], database = [], topics = [] } = proj
 
-    const frameworkArray: string[] = projects.reduce((pv: string[], cv) => {
-      const { frameworks } = cv
-      if (!frameworks || !frameworks.length) {
-        return pv
-      }
+      langSet.add(language)
 
-      return [...pv, ...frameworks]
-    }, [])
-
-    const databaseArray = projects.reduce((pv: string[], cv) => {
-      const { database } = cv
-      if (!database || !database.length) {
-        return pv
-      }
-
-      return [...pv, ...database]
-    }, [])
-
-    const langSet = new Set(langArray)
-    const frameworkSet = new Set(frameworkArray)
-    const databaseSet = new Set(databaseArray)
+      frameworks.forEach(fw => fwSet.add(fw))
+      database.forEach(db => dbSet.add(db))
+      topics.forEach(tp => topicSet.add(tp))
+    })
 
     setFilters({
       languages: langSet,
-      frameworks: frameworkSet,
-      database: databaseSet
+      frameworks: fwSet,
+      database: dbSet,
+      topics: topicSet
     })
   }, [projects])
 
@@ -89,9 +79,10 @@ const Projects: React.FC = () => {
     }
 
     return projects.map(project => {
-      const { languages, frameworks, database } = selectedFilters
+      const { languages, frameworks, database, topics } = selectedFilters
 
-      const isFiltered = languages.size || frameworks.size || database.size
+      const isFiltered =
+        languages.size || frameworks.size || database.size || topics.size
 
       const ProjectComponent = (
         <Project
@@ -120,6 +111,12 @@ const Projects: React.FC = () => {
         )
 
         if (databaseIntersection?.length) {
+          return ProjectComponent
+        }
+
+        const topicIntersection = project.topics?.filter(tp => topics.has(tp))
+
+        if (topicIntersection?.length) {
           return ProjectComponent
         }
 
