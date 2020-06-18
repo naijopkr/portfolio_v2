@@ -38,6 +38,10 @@ export const CCWrapper = styled.div`
       flex-basis: 40%;
 
       width: 100%;
+
+      textarea {
+        resize: none;
+      }
     }
 
     .output-label {
