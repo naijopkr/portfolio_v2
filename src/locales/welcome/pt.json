@@ -1,6 +1,6 @@
 {
   "title": "Olá, {{name}} aqui!!! Bem-vindo e deixa eu te contar sobre isso aqui.",
-  "presentation": "Como você pode ver, esta é uma versão Beta. Isso porque, ainda tem muitas funcionalidades que eu pretendo implmentar. Por ora, você pode conferir as seguintes seções:",
+  "presentation": "Como você pode ver, esta é uma versão Beta. Isso porque, ainda tem muitas funcionalidades que eu pretendo implementar. Por ora, você pode conferir as seguintes seções:",
   "welcome_items": [
     {
       "section": "Projetos",
@@ -58,5 +58,5 @@
       }
     ]
   },
-  "about": "A propósito, Este porjeto é público no GitHub. Faça um fork!!!"
+  "about": "A propósito, este projeto é público no GitHub. Faça um fork!!!"
 }
