@@ -6,6 +6,13 @@ export const WelcomeWrapper = styled.div`
   justify-content: center;
   align-items: flex-start;
 
+  @media (max-width: 600px) {
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    padding: 8px 16px;
+  }
+
   width: 80%;
   max-width: 1110px;
   padding: 32px 72px;
@@ -19,9 +26,13 @@ export const WelcomeWrapper = styled.div`
   box-sizing: border-box;
 
   .title {
+    @media (max-width: 600px) {
+      font-size: 32px;
+    }
+
     font-family: ${({ theme }) => theme.fonts.normal};
     font-size: 56px;
-    line-height: 68px;
+    line-height: 1.5;
     margin-bottom: 40px;
   }
 
@@ -44,6 +55,9 @@ export const WelcomeWrapper = styled.div`
   }
 
   .about {
+    @media (max-width: 600px) {
+      text-align: center;
+    }
     align-self: center;
     padding: 8px 16px;
     border-radius: 8px;
@@ -62,6 +76,11 @@ export const WelcomeWrapper = styled.div`
   }
 
   .body-list {
+    @media (max-width: 600px) {
+      margin: 0 0 0 8px;
+      font-size: 16px;
+    }
+
     font-family: ${({ theme }) => theme.fonts.normal};
     font-size: 24px;
     list-style-type: none;
