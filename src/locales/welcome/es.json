@@ -1,39 +1,39 @@
 {
-  "title": "Hola, {{name}} aquí!!! Bienvenido y dejáme contar lo que pasa.",
-  "presentation": "Como puede ver, esta es una versión Beta. Eso porque todavía hay muchas funcionalidades que pretendo implementar aquí. Mientras tanto, puede conferir las siguientes secciones:",
+  "title": "Hola, {{name}} aquí!!! Bienvenido y déjeme contarle lo que pasa aquí.",
+  "presentation": "Como puede ver, esta es una versión Beta. Esto es porque todavía hay muchas funcionalidades que pretendo implementar aquí. Mientras tanto, puede consultar las siguientes secciones:",
   "welcome_items": [
     {
       "section": "Proyectos",
-      "label": "Mis repositorios de GitHub. Si está estudiando programación, data science y/o statistical learning / machine learning, hay un montón de contenido inspirarse.",
+      "label": "Mis repositorios de GitHub. Si está estudiando programación, data science y/o statistical learning / machine learning, hay un montón de contenido para inspirarse.",
       "path": "/projects",
       "icon": "code"
     },
     {
       "section": "Artículos",
-      "label": "Posts que escribí relacionados a cybersecurity, código abierto (open source), productividad y desarrollo. (Solo en portugués por enquanto)",
+      "label": "Posts que escribí relacionados a cybersecurity, código abierto (open source), productividad y desarrollo. (Solo en portugués por ahora)",
       "path": "/articles",
       "icon": "chrome_reader_mode"
     },
     {
       "section": "Playground",
-      "label": "Algunos widgets chévere que implementé para darle ideas y divertirse.",
+      "label": "Algunos widgets chéveres que implementé para darle ideas y que se divierta.",
       "path": "/playground",
       "icon": "videogame_asset"
     },
     {
       "section": "Contact",
-      "label": "Si quiere contactarme para trabajar juntos o con preguntas / sugeréncias or with questions / suggestions, siéntase libre para llenar el formulario de contacto. También me encontrará en las plataformas de mídia social:",
+      "label": "Si quiere contactarme para trabajar juntos o con preguntas / sugeréncias, siéntase libre para llenar el formulario de contacto. También me encontrará en las plataformas de medios sociales:",
       "path": "/contact",
       "icon": "mail"
     }
   ],
   "coming_soon": {
-    "title": "Proximamente",
+    "title": "Próximamente",
     "desc": "Y que funcionalidades pretendo tener aquí en el futuro? Aquí están algunas:",
     "soon_items": [
       {
         "section": "API",
-        "label": "Implementar un api web para automatizar la búsqueda por mis repositorios de GitHub y posibilitar la creación de otros widgets que necesitan un servidor de back-end para funcionar mejor.",
+        "label": "Implementar un api web para automatizar la búsqueda de mis repositorios de GitHub y posibilitar la creación de otros widgets que necesitan un servidor de back-end para funcionar mejor.",
         "icon": "https"
       },
       {

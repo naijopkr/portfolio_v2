@@ -38,12 +38,12 @@
       },
       {
         "section": "Videos",
-        "label": "Create a Videos section with tutorials / programming courses.",
+        "label": "Create a \"Videos\" section with tutorials / programming courses.",
         "icon": "video_library"
       },
       {
         "section": "Translated articles",
-        "label": "I will translate my articles to English and Spanish, but first I'm thinking about hosting my own blog instead of posting it on Dev, that way I have more flexibility.",
+        "label": "I will translate my articles to English and Spanish, but first I'm thinking about hosting my own blog instead of posting it on Dev, that way I'll have more flexibility.",
         "icon": "language"
       },
       {
