@@ -1,5 +1,82 @@
 [
   {
+    "id": 274766496,
+    "name": "islr-linear-regression",
+    "published_on": {
+      "github": "https://github.com/naijopkr/islr-linear-regression"
+    },
+    "description": "R Lab from Introduction to Statistical Learning (Chapter 3)",
+    "language": "R",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-06-24T22:28:45Z"
+  },
+  {
+    "id": 274722026,
+    "name": "iris-flower",
+    "published_on": {
+      "github": "https://github.com/naijopkr/iris-flower"
+    },
+    "description": "Support Vector Classification model on iris flower data set",
+    "language": "Python",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-06-24T16:54:11Z"
+  },
+  {
+    "id": 274711613,
+    "name": "svm-training",
+    "published_on": {
+      "github": "https://github.com/naijopkr/svm-training"
+    },
+    "description": "Support Vector Machine training",
+    "language": "Python",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-06-24T16:05:48Z"
+  },
+  {
+    "id": 274461274,
+    "name": "company-credit",
+    "published_on": {
+      "github": "https://github.com/naijopkr/company-credit"
+    },
+    "description": "Decision Trees and Random Forests applied to credit company prediction on whether someone will pay a loan.",
+    "language": "Python",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-06-23T17:01:11Z"
+  },
+  {
+    "id": 274239957,
+    "name": "decision-trees",
+    "published_on": {
+      "github": "https://github.com/naijopkr/decision-trees"
+    },
+    "description": "Decision trees and Random forests examples with Python",
+    "language": "Python",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-06-22T20:53:43Z"
+  },
+  {
+    "id": 273334742,
+    "name": "knn-python-2",
+    "published_on": {
+      "github": "https://github.com/naijopkr/knn-python-2"
+    },
+    "description": "Example of K Nearest Neighbors method with Python",
+    "language": "Python",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-06-18T20:34:59Z"
+  },
+  {
+    "id": 273078519,
+    "name": "knn-python",
+    "published_on": {
+      "github": "https://github.com/naijopkr/knn-python"
+    },
+    "description": "Evaluating K Nearest Neghbors prediction model",
+    "language": "Python",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-06-17T21:08:23Z"
+  },
+  {
     "id": 272806478,
     "name": "advertising",
     "published_on": {
