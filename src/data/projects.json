@@ -1,5 +1,104 @@
 [
   {
+    "id": 278208165,
+    "name": "islr-classification",
+    "published_on": {
+      "github": "https://github.com/naijopkr/islr-classification"
+    },
+    "description": "R Lab from Introduction to Statistical Learning (Chapter 4)",
+    "language": "R",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-07-09T22:49:29Z"
+  },
+  {
+    "id": 278470015,
+    "name": "natural-language-processing",
+    "published_on": {
+      "github": "https://github.com/naijopkr/natural-language-processing"
+    },
+    "description": "Natural Language Processing with Python to classify spam messages on a SMS data set",
+    "language": "Python",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-07-09T21:01:45Z"
+  },
+  {
+    "id": 277625917,
+    "name": "basic-recommender-system",
+    "published_on": {
+      "github": "https://github.com/naijopkr/basic-recommender-system"
+    },
+    "description": "Basic movie recommendation system using Python",
+    "language": "Python",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-07-08T13:24:17Z"
+  },
+  {
+    "id": 277909992,
+    "name": "model-based-cf",
+    "published_on": {
+      "github": "https://github.com/naijopkr/model-based-cf"
+    },
+    "description": "Model based collaborative filtering recommendation system for movies in Python",
+    "language": "Python",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-07-07T19:58:39Z"
+  },
+  {
+    "id": 277651041,
+    "name": "memory-based-cf",
+    "published_on": {
+      "github": "https://github.com/naijopkr/memory-based-cf"
+    },
+    "description": "Memory based collaborative filtering recommendation system for movies in Python",
+    "language": "Python",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-07-06T21:19:59Z"
+  },
+  {
+    "id": 276154387,
+    "name": "pca-training",
+    "published_on": {
+      "github": "https://github.com/naijopkr/pca-training"
+    },
+    "description": "Principal Component Analysis training in Python",
+    "language": "Python",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-06-30T16:34:29Z"
+  },
+  {
+    "id": 276137165,
+    "name": "brl-btc-variation",
+    "published_on": {
+      "github": "https://github.com/naijopkr/brl-btc-variation"
+    },
+    "description": "Price variation for Brazilian Real and Bitcoin",
+    "language": "Python",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-06-30T15:23:21Z"
+  },
+  {
+    "id": 275869386,
+    "name": "kmeans-university",
+    "published_on": {
+      "github": "https://github.com/naijopkr/kmeans-university"
+    },
+    "description": "K Means Cluster model applied to predict if College is private or public",
+    "language": "Python",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-06-29T16:28:32Z"
+  },
+  {
+    "id": 275256375,
+    "name": "kmeans-training",
+    "published_on": {
+      "github": "https://github.com/naijopkr/kmeans-training"
+    },
+    "description": "Example of K Means model with mocked data",
+    "language": "Python",
+    "topics": ["Data Science", "Machine Learning"],
+    "updated_at": "2020-06-26T22:35:31Z"
+  },
+  {
     "id": 274766496,
     "name": "islr-linear-regression",
     "published_on": {
