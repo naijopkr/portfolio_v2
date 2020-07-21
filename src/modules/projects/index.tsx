@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 
+import Loader from '../shared/loader'
 import { fetchProjects } from '../../data/requests'
 import { IProject } from '../../data/interfaces'
 import Project from './components/project'
@@ -9,6 +10,7 @@ import Filters, { IFilters } from './components/filters'
 
 const Projects: React.FC = () => {
   const { t } = useTranslation('projects')
+  const [loading, setLoading] = useState(true)
 
   const [selectedFilters, selectFilters] = useState<IFilters>({
     languages: new Set(),
@@ -31,7 +33,10 @@ const Projects: React.FC = () => {
       .catch(() => {
         setProjects([])
       })
-  }, [])
+      .finally(() => setLoading(false))
+
+    return () => setLoading(true)
+  }, [setLoading])
 
   // FETCH FILTERS
   useEffect(() => {
@@ -74,6 +79,9 @@ const Projects: React.FC = () => {
   )
 
   const renderProjects = useCallback(() => {
+    if (loading) {
+      return <Loader />
+    }
     if (!projects.length) {
       return <div className="projects-notfound">{t('no-projects-found')}</div>
     }
@@ -125,7 +133,7 @@ const Projects: React.FC = () => {
 
       return ProjectComponent
     })
-  }, [projects, t, selectedFilters, handleFilters])
+  }, [projects, t, selectedFilters, handleFilters, loading])
 
   return (
     <ProjectsWrapper>

@@ -54,6 +54,7 @@ export const ProjectsWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 32px;
 
     height: 200px;
     width: 300px;
@@ -74,6 +75,7 @@ export const TagWrapper = styled.div`
 
   padding: 2px 8px;
   margin-right: 3px;
+  margin-bottom: 4px;
 
   text-transform: lowercase;
   font-size: 14px;

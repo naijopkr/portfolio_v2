@@ -16,16 +16,12 @@ export const fetchProjects: TFetch<IProject[]> = async () => {
     })
     .then((res: IProject[]) => {
       return res.map(proj => {
-        let newProj = proj
         if (proj.topics?.length) {
           const topics = mapTopics(proj.topics)
-          newProj = {
-            ...newProj,
-            ...topics
-          }
+          Object.assign(proj, { ...topics })
         }
 
-        return newProj
+        return proj
       })
     })
     .catch(() => {

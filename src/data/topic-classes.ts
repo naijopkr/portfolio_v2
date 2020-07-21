@@ -1,16 +1,30 @@
 interface IClasses {
   frameworks: string[]
+  database: string[]
   topics: string[]
 }
 
 type TClassify = (t: string) => keyof IClasses
 type TMapTopics = (c: string[]) => IClasses
 
-const FRAMEWORKS = ['react', 'flask']
+const FRAMEWORKS = [
+  'react',
+  'flask',
+  'tensorflow',
+  'express',
+  'electron',
+  'dotnet-core'
+]
+
+const DATABASES = ['mongodb']
 
 const classifyTopic: TClassify = (topic: string) => {
   if (FRAMEWORKS.includes(topic.toLowerCase())) {
     return 'frameworks'
+  }
+
+  if (DATABASES.includes(topic.toLowerCase())) {
+    return 'database'
   }
 
   return 'topics'
@@ -19,6 +33,7 @@ const classifyTopic: TClassify = (topic: string) => {
 export const mapTopics: TMapTopics = (candidates: string[]) => {
   const classified: IClasses = {
     frameworks: [],
+    database: [],
     topics: []
   }
 
