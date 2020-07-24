@@ -10,6 +10,7 @@ type TMapTopics = (c: string[]) => IClasses
 const FRAMEWORKS = [
   'react',
   'flask',
+  'django',
   'tensorflow',
   'express',
   'electron',
