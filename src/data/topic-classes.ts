@@ -12,6 +12,8 @@ const FRAMEWORKS = [
   'flask',
   'django',
   'tensorflow',
+  'keras',
+  'spark',
   'express',
   'electron',
   'dotnet-core'
